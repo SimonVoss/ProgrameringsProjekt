@@ -5,4 +5,5 @@ int main(void)
 {
 	while(1){}
 	test = 1;
+	int32_t bingbong;
 }
