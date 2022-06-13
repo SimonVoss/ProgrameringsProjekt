@@ -68,7 +68,60 @@ int main(void) {
 	makeBoard();
 	goodShip player;
 	createPlayer(&player);
-
-
+	int32_t i;
+	for(i=0;i<=100000;i++){}
+	playerMove(&player, 1);
+	for(i=0;i<=100000;i++){}
+	playerMove(&player, 1);
+	for(i=0;i<=100000;i++){}
+	playerMove(&player, 1);
+	for(i=0;i<=100000;i++){}
+	playerMove(&player, 1);
+	for(i=0;i<=100000;i++){}
+	playerMove(&player, 1);
+	for(i=0;i<=100000;i++){}
+	playerMove(&player, 1);
+	for(i=0;i<=100000;i++){}
+	playerMove(&player, 1);
+	for(i=0;i<=100000;i++){}
+	playerMove(&player, 1);
+	for(i=0;i<=100000;i++){}
+	playerMove(&player, 1);
+	for(i=0;i<=100000;i++){}
+	playerMove(&player, 1);
+	for(i=0;i<=100000;i++){}
+	playerMove(&player, 1);
+	for(i=0;i<=100000;i++){}
+	playerMove(&player, 1);
+	for(i=0;i<=100000;i++){}
+	playerMove(&player, 1);
+	for(i=0;i<=100000;i++){}
+	playerMove(&player, 1);
+	for(i=0;i<=100000;i++){}
+	playerMove(&player, 1);
+	for(i=0;i<=100000;i++){}
+	playerMove(&player, 1);
+	for(i=0;i<=100000;i++){}
+	playerMove(&player, 2);
+	for(i=0;i<=100000;i++){}
+	playerMove(&player, 2);
+	for(i=0;i<=100000;i++){}
+	playerMove(&player, 2);
+	for(i=0;i<=100000;i++){}
+	playerMove(&player, 2);
+	for(i=0;i<=100000;i++){}
+	playerMove(&player, 2);
+	for(i=0;i<=100000;i++){}
+	playerMove(&player, 2);
+	for(i=0;i<=100000;i++){}
+	playerMove(&player, 2);
+	for(i=0;i<=100000;i++){}
+	playerMove(&player, 2);
+	for(i=0;i<=100000;i++){}
+	playerMove(&player, 2);
+	for(i=0;i<=100000;i++){}
+	playerMove(&player, 2);
+	for(i=0;i<=100000;i++){}
+	playerMove(&player, 2);
 	while(1){}
 }
