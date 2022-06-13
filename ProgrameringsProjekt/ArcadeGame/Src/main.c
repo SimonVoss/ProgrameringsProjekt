@@ -11,6 +11,7 @@
 
 static int32_t flag = 0;
 static int32_t c = 0<<8;
+static int PRESCALER_VALUE = 9;
 
 void TIM2_IRQHandler(void) {
 	c=c+(1<<8);
@@ -93,7 +94,12 @@ int main(void) {
 
 	//Hentning af info Start
 	int JoystickWay = ADCread();
-	clockInit();
+
+
+	while(1){
+
+//	clockInit();
+	buzz(100);
 
 
 	//Hentning af info Slut
@@ -101,10 +107,5 @@ int main(void) {
 
 //	Testområde
 
-
-
-
-	while(1){
-		buzz(0)
 	}
 }

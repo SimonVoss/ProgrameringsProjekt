@@ -1,0 +1,4 @@
+../Src/Bullets.c:4:6:bulletSpaceship	24	static
+../Src/Bullets.c:12:6:bulletEnemy	24	static
+../Src/Bullets.c:20:6:updateBulletFriendly	24	static
+../Src/Bullets.c:39:6:updateBulletEnemy	24	static

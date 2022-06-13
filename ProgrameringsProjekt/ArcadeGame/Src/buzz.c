@@ -3,17 +3,17 @@
 #include "buzz.h"
 
 
-void buzz(int16_t lyd, int32_t *flag, int32_t *c){
+void buzz(int16_t lyd){
 
-		if(lyd == 0){
-			int freq = 300;
+			int freq = lyd;
 			int PRESCALER_VALUE = 9;
 			uint32_t reload = 64e6 / freq / (PRESCALER_VALUE + 1) - 1;
 			TIM2->ARR = reload; // Set auto reload value
 			TIM2->CCR3 = reload/2; // Set compare register
 			TIM2->EGR |= 0x01;
-			count10(&c,&flag);
+			printf("%d\n",lyd);
+
 			
-		}
+
 
 	}
