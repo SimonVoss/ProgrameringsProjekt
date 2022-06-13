@@ -24,6 +24,7 @@
 "./Src/ADCread.o"
 "./Src/ansi.o"
 "./Src/ex2.o"
+"./Src/gameBoard.o"
 "./Src/main.o"
 "./Src/sprite.o"
 "./Src/syscalls.o"

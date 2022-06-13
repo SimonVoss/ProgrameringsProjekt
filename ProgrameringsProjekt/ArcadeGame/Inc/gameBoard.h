@@ -6,6 +6,7 @@
 #include "ansi.h"
 #include "ex2.h"
 
+void makeBorder(void);
 void makeBoard(void);
 
 
