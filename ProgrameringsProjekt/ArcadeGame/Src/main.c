@@ -92,16 +92,19 @@ int main(void) {
 	//Initialicering af Programmer i main Slut
 
 	//Hentning af info Start
-
 	int JoystickWay = ADCread();
+	clockInit();
+
 
 	//Hentning af info Slut
 
 
 //	Testområde
-	printf("Value = %d\n", JoystickWay);
 
 
 
-	while(1){}
+
+	while(1){
+		buzz(0)
+	}
 }
