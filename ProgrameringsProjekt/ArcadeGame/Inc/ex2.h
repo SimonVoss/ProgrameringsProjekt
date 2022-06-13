@@ -8,11 +8,11 @@
 
 void clrsrc(void);
 void clreol(void);
-void gotoxy(int8_t x, int8_t y);
-void underline(int8_t on);
-void blink(int8_t on);
-void inverse(int8_t on);
-void window(int8_t x1, int8_t y1, int8_t x2, int8_t y2, char title[], int8_t style);
+void gotoxy(int32_t x, int32_t y);
+void underline(int32_t on);
+void blink(int32_t on);
+void inverse(int32_t on);
+void window(int32_t x1, int32_t y1, int32_t x2, int32_t y2, char title[], int32_t style);
 
 
 #endif /* EX2_H_ */

@@ -9,11 +9,11 @@ void clreol(void) {
 	printf("%c[K", 0x1B);
 }
 
-void gotoxy(int8_t x, int8_t y) {
+void gotoxy(int32_t x, int32_t y) {
 	printf("%c[%d;%dH", 0x1B,y,x);
 }
 
-void underline(int8_t on) {
+void underline(int32_t on) {
 	if (on==1) {
 		printf("%c[04m", 0x1B);
 	}
@@ -22,7 +22,7 @@ void underline(int8_t on) {
 	}
 }
 
-void blink(int8_t on) {
+void blink(int32_t on) {
 	if (on==1) {
 		printf("%c[05m", 0x1B);
 	}
@@ -31,7 +31,7 @@ void blink(int8_t on) {
 	}
 }
 
-void inverse(int8_t on) {
+void inverse(int32_t on) {
 	if (on==1) {
 		printf("%c[07m", 0x1B);
 	}
@@ -40,7 +40,7 @@ void inverse(int8_t on) {
 	}
 }
 
-void window(int8_t x1, int8_t y1, int8_t x2, int8_t y2, char title[], int8_t style) {
+void window(int32_t x1, int32_t y1, int32_t x2, int32_t y2, char title[], int32_t style) {
 	int length = sizeof(title)/sizeof(title[0]);
 	char tline[x2-x1-6-length+1];
 	char bline[x2-x1-2+1];
