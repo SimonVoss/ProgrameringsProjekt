@@ -3,6 +3,7 @@
 #include "ansi.h"
 #include "ADCread.h"
 #include "ex2.h"
+#include "buzz.h"
 
 
 //Initialicering af Programmer Start
@@ -47,7 +48,7 @@ void ADCConfig(void) {
 
 int main(void) {
 	//Initialicering af forbindelse
-	uart_init(9600);
+	uart_init(115200);
 
 
 	//Initialicering af Programmer i main Start
