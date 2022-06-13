@@ -1,0 +1,3 @@
+../Src/sprite.c:3:6:player	32	static
+../Src/sprite.c:35:6:enemy	32	static
+../Src/sprite.c:70:6:astroid	32	static
