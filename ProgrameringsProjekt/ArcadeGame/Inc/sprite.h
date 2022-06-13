@@ -8,9 +8,12 @@
 #include "ansi.h"
 #include "ex2.h"
 
-void player(int32_t x, int32_t y);
-void enemy(int32_t x, int32_t y);
-void astroid(int32_t x, int32_t y);
+void playerDraw(int32_t x, int32_t y);
+void playerRemove(int32_t x, int32_t y);
+void enemyDraw(int32_t x, int32_t y);
+void enemyRemove(int32_t x, int32_t y);
+void astroidDraw(int32_t x, int32_t y);
+void astroidRemove(int32_t x, int32_t y);
 
 
 
