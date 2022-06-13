@@ -75,6 +75,7 @@ int main(void) {
 
 	//Initialicering af Programmer i main Start
 	ADCConfig();
+	BuzzConfig();
 
 	//Initialicering af Programmer i main Slut
 
