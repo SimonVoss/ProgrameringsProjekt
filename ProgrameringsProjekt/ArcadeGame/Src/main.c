@@ -2,6 +2,7 @@
 #include "30010_io.h" 		// Input/output library for this course
 #include "ansi.h"
 #include "ADCread.h"
+#include "ex2.h"
 
 
 //Initialicering af Programmer Start
@@ -45,7 +46,6 @@ void ADCConfig(void) {
 
 
 int main(void) {
-
 	//Initialicering af forbindelse
 	uart_init(9600);
 
@@ -55,11 +55,17 @@ int main(void) {
 
 	//Initialicering af Programmer i main Slut
 
-	//Hentning af info
+	//Hentning af info Start
 
 	int JoystickWay = ADCread();
 
+	//Hentning af info Slut
+
+
+//	Testområde
 	printf("Value = %d\n", JoystickWay);
+
+
 
 	while(1){}
 }
