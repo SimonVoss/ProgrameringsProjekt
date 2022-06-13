@@ -81,7 +81,7 @@ void BuzzConfig(void){
 
 int main(void) {
 	//Initialicering af forbindelse
-	uart_init(9600);
+	uart_init(115200);
 
 
 	//Initialicering af Programmer i main Start
