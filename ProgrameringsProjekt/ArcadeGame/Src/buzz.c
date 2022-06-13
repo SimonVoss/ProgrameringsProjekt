@@ -3,7 +3,7 @@
 #include "buzz.h"
 
 
-void buzz(int16_t lyd){
+void buzz(int32_t lyd){
 
 			int freq = lyd;
 			int PRESCALER_VALUE = 9;

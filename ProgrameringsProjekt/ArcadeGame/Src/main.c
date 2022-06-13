@@ -13,10 +13,7 @@ static int32_t flag = 0;
 static int32_t c = 0<<8;
 static int PRESCALER_VALUE = 9;
 
-void TIM2_IRQHandler(void) {
-	c=c+(1<<8);
-	TIM2->SR &= ~0x0001; // Clear interrupt bit
-}
+
 
 
 //Initialicering af Programmer Start
@@ -77,6 +74,11 @@ void BuzzConfig(void){
 
 	GPIO_PinAFConfig(GPIOB, GPIO_PinSource10, GPIO_AF_1);
 }
+void TIM2_IRQHandler(void) {
+	c=c+(1<<8);
+	TIM2->SR &= ~0x0001; // Clear interrupt bit
+}
+
 
 //Initialicering af Programmer Slut
 
@@ -95,11 +97,11 @@ int main(void) {
 	//Hentning af info Start
 	int JoystickWay = ADCread();
 
-
+	buzz(30);
 	while(1){
 
 //	clockInit();
-	buzz(100);
+
 
 
 	//Hentning af info Slut
