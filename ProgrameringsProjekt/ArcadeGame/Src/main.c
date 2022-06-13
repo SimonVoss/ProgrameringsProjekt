@@ -3,6 +3,18 @@
 #include "ansi.h"
 #include "ADCread.h"
 #include "ex2.h"
+#include "Bullets.h"
+#include "timer.h"
+
+
+
+static int32_t flag = 0;
+static int32_t c = 0<<8;
+
+void TIM2_IRQHandler(void) {
+	c=c+(1<<8);
+	TIM2->SR &= ~0x0001; // Clear interrupt bit
+}
 
 
 //Initialicering af Programmer Start
