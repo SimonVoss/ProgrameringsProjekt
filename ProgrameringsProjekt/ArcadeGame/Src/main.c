@@ -3,7 +3,9 @@
 #include "ansi.h"
 #include "ADCread.h"
 #include "ex2.h"
-
+#include "sprite.h"
+#include "gameBoard.h"
+#include "player.h"
 
 //Initialicering af Programmer Start
 
@@ -47,24 +49,25 @@ void ADCConfig(void) {
 
 int main(void) {
 	//Initialicering af forbindelse
-	uart_init(9600);
+	uart_init(115200);
 
 
 	//Initialicering af Programmer i main Start
-	ADCConfig();
+	//ADCConfig();
 
 	//Initialicering af Programmer i main Slut
 
 	//Hentning af info Start
 
-	int JoystickWay = ADCread();
+	//int JoystickWay = ADCread();
 
 	//Hentning af info Slut
 
 
 //	Testområde
-	printf("Value = %d\n", JoystickWay);
-
+	makeBoard();
+	goodShip player;
+	createPlayer(&player);
 
 
 	while(1){}

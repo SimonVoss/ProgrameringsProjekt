@@ -9,8 +9,10 @@ C_SRCS += \
 ../Src/ADCread.c \
 ../Src/ansi.c \
 ../Src/ex2.c \
+../Src/ex5.c \
 ../Src/gameBoard.c \
 ../Src/main.c \
+../Src/player.c \
 ../Src/sprite.c \
 ../Src/syscalls.c \
 ../Src/sysmem.c \
@@ -21,8 +23,10 @@ OBJS += \
 ./Src/ADCread.o \
 ./Src/ansi.o \
 ./Src/ex2.o \
+./Src/ex5.o \
 ./Src/gameBoard.o \
 ./Src/main.o \
+./Src/player.o \
 ./Src/sprite.o \
 ./Src/syscalls.o \
 ./Src/sysmem.o \
@@ -33,8 +37,10 @@ C_DEPS += \
 ./Src/ADCread.d \
 ./Src/ansi.d \
 ./Src/ex2.d \
+./Src/ex5.d \
 ./Src/gameBoard.d \
 ./Src/main.d \
+./Src/player.d \
 ./Src/sprite.d \
 ./Src/syscalls.d \
 ./Src/sysmem.d \
@@ -48,7 +54,7 @@ Src/%.o Src/%.su: ../Src/%.c Src/subdir.mk
 clean: clean-Src
 
 clean-Src:
-	-$(RM) ./Src/30010_io.d ./Src/30010_io.o ./Src/30010_io.su ./Src/ADCread.d ./Src/ADCread.o ./Src/ADCread.su ./Src/ansi.d ./Src/ansi.o ./Src/ansi.su ./Src/ex2.d ./Src/ex2.o ./Src/ex2.su ./Src/gameBoard.d ./Src/gameBoard.o ./Src/gameBoard.su ./Src/main.d ./Src/main.o ./Src/main.su ./Src/sprite.d ./Src/sprite.o ./Src/sprite.su ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/system_stm32f30x.d ./Src/system_stm32f30x.o ./Src/system_stm32f30x.su
+	-$(RM) ./Src/30010_io.d ./Src/30010_io.o ./Src/30010_io.su ./Src/ADCread.d ./Src/ADCread.o ./Src/ADCread.su ./Src/ansi.d ./Src/ansi.o ./Src/ansi.su ./Src/ex2.d ./Src/ex2.o ./Src/ex2.su ./Src/ex5.d ./Src/ex5.o ./Src/ex5.su ./Src/gameBoard.d ./Src/gameBoard.o ./Src/gameBoard.su ./Src/main.d ./Src/main.o ./Src/main.su ./Src/player.d ./Src/player.o ./Src/player.su ./Src/sprite.d ./Src/sprite.o ./Src/sprite.su ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/system_stm32f30x.d ./Src/system_stm32f30x.o ./Src/system_stm32f30x.su
 
 .PHONY: clean-Src
 

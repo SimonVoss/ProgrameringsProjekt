@@ -1,4 +1,6 @@
-Src/main.o: ../Src/main.c \
+Src/player.o: ../Src/player.c \
+ C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/player.h \
+ C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/30010_io.h \
  C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/stm32f30x_conf.h \
  C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_adc.h \
  C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/stm32f30x.h \
@@ -7,7 +9,6 @@ Src/main.o: ../Src/main.c \
  C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/cmsis/core_cmFunc.h \
  C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/cmsis/core_cm4_simd.h \
  C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/system_stm32f30x.h \
- C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/stm32f30x_conf.h \
  C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_can.h \
  C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_crc.h \
  C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_comp.h \
@@ -29,17 +30,11 @@ Src/main.o: ../Src/main.c \
  C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_usart.h \
  C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_wwdg.h \
  C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_misc.h \
- C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/30010_io.h \
- C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/ansi.h \
- C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/30010_io.h \
- C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/ADCread.h \
- C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/ex2.h \
  C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/sprite.h \
  C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/ansi.h \
- C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/ex2.h \
- C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/gameBoard.h \
- C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/player.h \
- C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/sprite.h
+ C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/ex2.h
+C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/player.h:
+C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/30010_io.h:
 C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/stm32f30x_conf.h:
 C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_adc.h:
 C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/stm32f30x.h:
@@ -48,7 +43,6 @@ C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/cmsis/core_cmInst
 C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/cmsis/core_cmFunc.h:
 C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/cmsis/core_cm4_simd.h:
 C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/system_stm32f30x.h:
-C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/stm32f30x_conf.h:
 C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_can.h:
 C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_crc.h:
 C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_comp.h:
@@ -70,14 +64,6 @@ C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x
 C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_usart.h:
 C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_wwdg.h:
 C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_misc.h:
-C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/30010_io.h:
-C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/ansi.h:
-C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/30010_io.h:
-C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/ADCread.h:
-C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/ex2.h:
 C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/sprite.h:
 C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/ansi.h:
 C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/ex2.h:
-C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/gameBoard.h:
-C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/player.h:
-C:/GitHub/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/sprite.h:

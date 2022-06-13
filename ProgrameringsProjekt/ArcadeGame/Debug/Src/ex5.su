@@ -1,0 +1,4 @@
+../Src/ex5.c:17:6:infoJoystick	4	static
+../Src/ex5.c:64:9:readJoystick	24	static
+../Src/ex5.c:91:6:infoLED	4	static
+../Src/ex5.c:135:6:setLED	16	static
