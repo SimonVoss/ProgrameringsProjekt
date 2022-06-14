@@ -34,15 +34,15 @@ void BuzzConfig(void){
 
 }
 void buzz(int32_t lyd, int32_t *c, int32_t *flag){
-int32_t i;
+
 	//sound effects
-	//0 - player moving
+	//0 - no sound
 	//1 - player shoots a bullet
 	//2 - Play gets hit
 	//3 - player hits an enemy / astoroid
 	//4 - new level
 
-	int32_t j, k;
+	int32_t i, j, k;
 
 
 	if(lyd == 0){
@@ -61,7 +61,6 @@ int32_t i;
 			printf("freq = %d , i = %d , lyd = %d\n",freq,i,lyd);
 			for(j=0;j<=tid0;j++){}
 		}
-			//wait 10ms
 		TIM2->CR1 = 0x0000; // Disable timer
 	}
 
@@ -77,7 +76,6 @@ int32_t i;
 			printf("freq = %d , i = %d , lyd = %d\n",freq,i,lyd);
 			for(j=0;j<=tid1;j++){}
 		}
-			//wait 10ms
 		TIM2->CR1 = 0x0000; // Disable timer
 	}
 
@@ -96,7 +94,6 @@ int32_t i;
 			}
 
 		}
-			//wait 10ms
 		TIM2->CR1 = 0x0000; // Disable timer
 	}
 
@@ -112,10 +109,8 @@ int32_t i;
 			printf("freq = %d , i = %d , lyd = %d\n",freq,i,lyd);
 			for(j=0;j<=tid3;j++){}
 		}
-			//wait 10ms
 		TIM2->CR1 = 0x0000; // Disable timer
 	}
-
 
 
 }

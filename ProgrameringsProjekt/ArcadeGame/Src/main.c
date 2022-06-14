@@ -21,6 +21,7 @@ void TIM1_BRK_TIM15_IRQHandler(void) {
 	c=c+(1<<8);
 	TIM15->SR &= ~0x0001; // Clear interrupt bit
 }
+
 //Initialicering af Programmer Slut
 
 
@@ -37,40 +38,31 @@ int main(void) {
 
 	//Initialicering af Programmer i main Slut
 
-	//Hentning af Statisk info Start
+
+	//Statisk info Start
 
 
 
 
-	//Hentning af Statisk info Slut
+	//Statisk info Slut
 
-	//Klad af funktioner
-//	bgcolor(0);
-//	makeBoard();
+
+	//	bgcolor(0);
+	//	makeBoard();
 
 	while(1){
+
 		//Hentning af kontinuerlig info Start
 
-
-
-
-
-
-
-
-
-
+		int32_t JoystickWay = ADCread();
+		int32_t buzzTest = PCBreadJoystick();
 
 		//Hentning af kontinuerlig info Slut
 
 
-//	Testområde
+		//	Testområde
 
-
-				int32_t JoystickWay = ADCread();
-				int32_t a = PCBreadJoystick();
-				buzz(a,&c, &flag);
-				printf("%d\n",a);
+		buzz(buzzTest,&c, &flag);
 
 
 	}
