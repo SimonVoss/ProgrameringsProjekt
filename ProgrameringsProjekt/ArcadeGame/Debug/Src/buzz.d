@@ -32,7 +32,8 @@ Src/buzz.o: ../Src/buzz.c \
  C:/Users/simon/OneDrive/Dokumenter/Skole/DTU/Prog\ Projekt/Projektet_Rapport/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/30010_io.h \
  C:/Users/simon/OneDrive/Dokumenter/Skole/DTU/Prog\ Projekt/Projektet_Rapport/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/buzz.h \
  C:/Users/simon/OneDrive/Dokumenter/Skole/DTU/Prog\ Projekt/Projektet_Rapport/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/30010_io.h \
- C:/Users/simon/OneDrive/Dokumenter/Skole/DTU/Prog\ Projekt/Projektet_Rapport/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/timer.h
+ C:/Users/simon/OneDrive/Dokumenter/Skole/DTU/Prog\ Projekt/Projektet_Rapport/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/timer.h \
+ C:/Users/simon/OneDrive/Dokumenter/Skole/DTU/Prog\ Projekt/Projektet_Rapport/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/ex2.h
 C:/Users/simon/OneDrive/Dokumenter/Skole/DTU/Prog\ Projekt/Projektet_Rapport/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/stm32f30x_conf.h:
 C:/Users/simon/OneDrive/Dokumenter/Skole/DTU/Prog\ Projekt/Projektet_Rapport/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_adc.h:
 C:/Users/simon/OneDrive/Dokumenter/Skole/DTU/Prog\ Projekt/Projektet_Rapport/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/stm32f30x.h:
@@ -67,3 +68,4 @@ C:/Users/simon/OneDrive/Dokumenter/Skole/DTU/Prog\ Projekt/Projektet_Rapport/Pro
 C:/Users/simon/OneDrive/Dokumenter/Skole/DTU/Prog\ Projekt/Projektet_Rapport/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/buzz.h:
 C:/Users/simon/OneDrive/Dokumenter/Skole/DTU/Prog\ Projekt/Projektet_Rapport/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/30010_io.h:
 C:/Users/simon/OneDrive/Dokumenter/Skole/DTU/Prog\ Projekt/Projektet_Rapport/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/timer.h:
+C:/Users/simon/OneDrive/Dokumenter/Skole/DTU/Prog\ Projekt/Projektet_Rapport/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/ex2.h:

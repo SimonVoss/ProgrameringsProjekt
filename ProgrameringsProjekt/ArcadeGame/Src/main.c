@@ -48,7 +48,7 @@ int main(void) {
 
 
 	//	bgcolor(0);
-	//	makeBoard();
+		makeBoard();
 
 	while(1){
 

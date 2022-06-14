@@ -1,6 +1,7 @@
 #include "stm32f30x_conf.h" // STM32 config
 #include "30010_io.h" 		// Input/output library for this course
 #include "buzz.h"
+#include "ex2.h"
 
 
 #define tid0 10000
@@ -30,7 +31,7 @@ void BuzzConfig(void){
 
 	GPIO_PinAFConfig(GPIOB, GPIO_PinSource10, GPIO_AF_1);
 
-
+	TIM2->CR1 = 0x0000; // Disable timer
 
 }
 void buzz(int32_t lyd, int32_t *c, int32_t *flag){
@@ -50,7 +51,7 @@ void buzz(int32_t lyd, int32_t *c, int32_t *flag){
 	}
 
 	if(lyd == 1){
-
+		TIM2->CR1 = 0x0001; // enable timer
 		for (i=1; i<3; i++){
 			int32_t freq = 500/i;
 			int32_t PRESCALER_VALUE = 9;
@@ -61,11 +62,11 @@ void buzz(int32_t lyd, int32_t *c, int32_t *flag){
 			printf("freq = %d , i = %d , lyd = %d\n",freq,i,lyd);
 			for(j=0;j<=tid0;j++){}
 		}
-		TIM2->CR1 = 0x0000; // Disable timer
+
 	}
 
 	if(lyd == 2){
-
+		TIM2->CR1 = 0x0001; // enable timer
 		for (i=50; i>=3; i--){
 			int32_t freq = 2*i;
 			int32_t PRESCALER_VALUE = 9;
@@ -76,11 +77,11 @@ void buzz(int32_t lyd, int32_t *c, int32_t *flag){
 			printf("freq = %d , i = %d , lyd = %d\n",freq,i,lyd);
 			for(j=0;j<=tid1;j++){}
 		}
-		TIM2->CR1 = 0x0000; // Disable timer
+
 	}
 
 	if(lyd == 4){
-
+		TIM2->CR1 = 0x0001; // enable timer
 		for (i=1; i<=3; i++){
 			for (j=1;j<=2;j++){
 			int32_t freq = 200/j;
@@ -94,13 +95,13 @@ void buzz(int32_t lyd, int32_t *c, int32_t *flag){
 			}
 
 		}
-		TIM2->CR1 = 0x0000; // Disable timer
+
 	}
 
 	if(lyd == 8){
-
+		TIM2->CR1 = 0x0001; // enable timer
 		for (i=1; i<=5; i++){
-			int32_t freq = 250*i;
+			int32_t freq = 500*i;
 			int32_t PRESCALER_VALUE = 9;
 			uint32_t reload = 64e6 / freq / (PRESCALER_VALUE + 1) - 1;
 			TIM2->ARR = reload; // Set auto reload value
@@ -109,7 +110,7 @@ void buzz(int32_t lyd, int32_t *c, int32_t *flag){
 			printf("freq = %d , i = %d , lyd = %d\n",freq,i,lyd);
 			for(j=0;j<=tid3;j++){}
 		}
-		TIM2->CR1 = 0x0000; // Disable timer
+
 	}
 
 
