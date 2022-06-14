@@ -24,17 +24,76 @@ void BuzzConfig(void){
 
 	GPIO_PinAFConfig(GPIOB, GPIO_PinSource10, GPIO_AF_1);
 }
-void buzz(int32_t lyd){
+void buzz(int32_t lyd, int32_t *c, int32_t flag){
+int32_t i;
+	//sound effects
+	//0 - player losses a life 		27sec
+	//1 - Play shoots a bullet		23sec
+	//2 - player hits an enemy
+	//3 - Player hits an storoid
+	//4 - new level
+	if(lyd == 0){
+		for (i=1; i<=20; i++){
+			int32_t freq = 500/i;
+			int32_t PRESCALER_VALUE = 9;
+			uint32_t reload = 64e6 / freq / (PRESCALER_VALUE + 1) - 1;
+			TIM2->ARR = reload; // Set auto reload value
+			TIM2->CCR3 = reload/2; // Set compare register
+			TIM2->EGR |= 0x01;
+			printf("%d\n",freq);
+			//wait 20ms
+			 while (flag == 0){
+				 delay(2000,&c,&flag);
+			 }
+			 flag = 0;
 
-			int freq = lyd;
+		}
+		int freq = 0;
+		int PRESCALER_VALUE = 9;
+		uint32_t reload = 64e6 / freq / (PRESCALER_VALUE + 1) - 1;
+		TIM2->ARR = reload; // Set auto reload value
+		TIM2->CCR3 = reload/2; // Set compare register
+		TIM2->EGR |= 0x01;
+		printf("%d\n",freq);
+
+	}
+	if(lyd == 1){
+		for (i=1; i<=10; i++){
+			int freq = 1000/i;
 			int PRESCALER_VALUE = 9;
 			uint32_t reload = 64e6 / freq / (PRESCALER_VALUE + 1) - 1;
 			TIM2->ARR = reload; // Set auto reload value
 			TIM2->CCR3 = reload/2; // Set compare register
 			TIM2->EGR |= 0x01;
-			printf("%d\n",lyd);
-
+			printf("%d\n",freq);
+			//wait 20ms
+		}
+	}
+	if(lyd == 2){
+		for (i=1; i<=10; i++){
+			int freq = 1000/i;
+			int PRESCALER_VALUE = 9;
+			uint32_t reload = 64e6 / freq / (PRESCALER_VALUE + 1) - 1;
+			TIM2->ARR = reload; // Set auto reload value
+			TIM2->CCR3 = reload/2; // Set compare register
+			TIM2->EGR |= 0x01;
+			printf("%d\n",freq);
+			//wait 20ms
+		}
+	}
+	if(lyd == 3){
+		for (i=1; i<=10; i++){
+			int freq = 1000/i;
+			int PRESCALER_VALUE = 9;
+			uint32_t reload = 64e6 / freq / (PRESCALER_VALUE + 1) - 1;
+			TIM2->ARR = reload; // Set auto reload value
+			TIM2->CCR3 = reload/2; // Set compare register
+			TIM2->EGR |= 0x01;
+			printf("%d\n",freq);
+			//wait 20ms
+		}
+	}
 			
 
 
-	}
+}

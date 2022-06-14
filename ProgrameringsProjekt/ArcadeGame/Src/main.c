@@ -6,6 +6,7 @@
 #include "Bullets.h"
 #include "timer.h"
 #include "buzz.h"
+#include "PCBJoystick.h"
 
 
 
@@ -36,11 +37,12 @@ int main(void) {
 	//Initialicering af Programmer i main Start
 	ADCConfig();
 	BuzzConfig();
+	clockInit();
 
 	//Initialicering af Programmer i main Slut
 
 	//Hentning af Statisk info Start
-	buzz(200);
+	buzz(0, &c, flag);
 
 
 

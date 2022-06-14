@@ -13,8 +13,8 @@ void clockInit(){
 	TIM2->CR1 = 0x0001; // start timer
 }
 
-void count10(int32_t *c,int32_t *flag){
-	int32_t time = 1000<<8;
+void delay(int32_t d,int32_t *c,int32_t *flag){
+	int32_t time = d<<8;
 	if (*c >= time){
 			*flag = 1;
 			*c=0;

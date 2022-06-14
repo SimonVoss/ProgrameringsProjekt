@@ -11,6 +11,7 @@
 
 
 void clockInit();
+void delay(int32_t d,int32_t *c,int32_t *flag);
 void clockCounter(int32_t score,int32_t *c,int32_t *flag);
 
 
