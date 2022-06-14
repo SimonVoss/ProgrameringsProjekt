@@ -2,7 +2,7 @@
 #include "30010_io.h" 		// Input/output library for this course
 #include "buzz.h"
 
-static int PRESCALER_VALUE = 0x0009;
+static int PRESCALER_VALUE = 9;
 void BuzzConfig(void){
 	RCC->APB1ENR |= 0x00000001; // Enable clock line to timer 2;
 	TIM2->CR1 = 0x0000; // Disable timer
@@ -24,7 +24,7 @@ void BuzzConfig(void){
 
 	GPIO_PinAFConfig(GPIOB, GPIO_PinSource10, GPIO_AF_1);
 }
-void buzz(int32_t lyd, int32_t *c, int32_t flag){
+void buzz(int32_t lyd, int32_t *c, int32_t *flag){
 int32_t i;
 	//sound effects
 	//0 - player losses a life 		27sec
@@ -33,35 +33,36 @@ int32_t i;
 	//3 - Player hits an storoid
 	//4 - new level
 	if(lyd == 0){
+		TIM2->CR1 = 0x0000; // Disable timer
 		for (i=1; i<=20; i++){
+
+			printf("bob , %d\n",i);
+		}
 			int32_t freq = 500/i;
 			int32_t PRESCALER_VALUE = 9;
 			uint32_t reload = 64e6 / freq / (PRESCALER_VALUE + 1) - 1;
 			TIM2->ARR = reload; // Set auto reload value
 			TIM2->CCR3 = reload/2; // Set compare register
 			TIM2->EGR |= 0x01;
-			printf("%d\n",freq);
-			//wait 20ms
-//			 while (flag == 0){
-//				 delay(2000,&c,&flag);
-//			 }
-//			 flag = 0;
+			printf("%d , %d\n",freq,i);
+//			//wait 10ms
+		printf("test , %d \n",lyd);
 
-		}
 		TIM2->CR1 = 0x0000; // Disable timer
 
 	}
 	if(lyd == 1){
-		for (i=1; i<=10; i++){
-			int freq = 1000/i;
+		for (i=1000; i<=1200; i++){
+			int freq = i;
 			int PRESCALER_VALUE = 9;
 			uint32_t reload = 64e6 / freq / (PRESCALER_VALUE + 1) - 1;
 			TIM2->ARR = reload; // Set auto reload value
 			TIM2->CCR3 = reload/2; // Set compare register
 			TIM2->EGR |= 0x01;
 			printf("%d\n",freq);
-			//wait 20ms
+			//wait 1ms
 		}
+		TIM2->CR1 = 0x0000; // Disable timer
 	}
 	if(lyd == 2){
 		for (i=1; i<=10; i++){
@@ -74,8 +75,32 @@ int32_t i;
 			printf("%d\n",freq);
 			//wait 20ms
 		}
+		TIM2->CR1 = 0x0000; // Disable timer
 	}
 	if(lyd == 3){
+		for (i=50; i<=100; i++){
+			int freq = i;
+			int PRESCALER_VALUE = 9;
+			uint32_t reload = 64e6 / freq / (PRESCALER_VALUE + 1) - 1;
+			TIM2->ARR = reload; // Set auto reload value
+			TIM2->CCR3 = reload/2; // Set compare register
+			TIM2->EGR |= 0x01;
+			printf("%d\n",freq);
+			//wait 10ms
+		}
+		for (i=100; i<=50; i++){
+			int freq = i;
+			int PRESCALER_VALUE = 9;
+			uint32_t reload = 64e6 / freq / (PRESCALER_VALUE + 1) - 1;
+			TIM2->ARR = reload; // Set auto reload value
+			TIM2->CCR3 = reload/2; // Set compare register
+			TIM2->EGR |= 0x01;
+			printf("%d\n",freq);
+			//wait 5ms
+		}
+		TIM2->CR1 = 0x0000; // Disable timer
+	}
+	if(lyd == 4){
 		for (i=1; i<=10; i++){
 			int freq = 1000/i;
 			int PRESCALER_VALUE = 9;
@@ -86,6 +111,7 @@ int32_t i;
 			printf("%d\n",freq);
 			//wait 20ms
 		}
+		TIM2->CR1 = 0x0000; // Disable timer
 	}
 			
 

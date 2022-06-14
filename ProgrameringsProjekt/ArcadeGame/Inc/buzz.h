@@ -6,7 +6,7 @@
 #include "30010_io.h" 		// Input/output library for this course
 #include "timer.h"
 void BuzzConfig(void);
-void buzz(int32_t lyd, int32_t *c, int32_t flag);
+void buzz(int32_t lyd, int32_t *c, int32_t *flag);
 
 
 

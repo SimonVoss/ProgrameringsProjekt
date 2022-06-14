@@ -3,14 +3,13 @@
 
 
 void clockInit(){
-	RCC->APB1ENR |= RCC_APB1Periph_TIM2; // Enable clock line to timer 2;
-	TIM2->CR1 = 0x0000;
-	TIM2->ARR = 0x18FF; // Set reload value
-	TIM2->PSC = 0x0000; // Set prescale value
-	TIM2->DIER |= 0x0001; // Enable timer 2 interrupts
-	NVIC_SetPriority(TIM2_IRQn, 0); // Set interrupt priority
-	NVIC_EnableIRQ(TIM2_IRQn); // Enable interrupt
-	TIM2->CR1 = 0x0001; // start timer
+	RCC->APB2ENR |= RCC_APB2Periph_TIM15; // Enable clock line to timer 2;
+	TIM15->CR1 = 0x0000; TIM15->ARR = 63999; // Set auto reload value
+	TIM15->PSC = 9; // Set pre-scaler value
+	TIM15->DIER |= 0x0001; // Enable timer interrupt
+	NVIC_SetPriority(TIM1_BRK_TIM15_IRQn, 0);
+	NVIC_EnableIRQ(TIM1_BRK_TIM15_IRQn);
+	TIM15->CR1 |= 0x0001; // Enable timer
 }
 
 void delay(int32_t d,int32_t *c,int32_t *flag){
