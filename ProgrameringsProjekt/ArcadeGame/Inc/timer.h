@@ -1,9 +1,7 @@
 
 #ifndef TIMER_H_
 #define TIMER_H_
-#define FIX8_SHIFT 8
-#define FIX8_MULT(a, b) ( (a)*(b) >> FIX8_SHIFT )
-#define FIX8_DIV(a, b) ( ((a) << FIX8_SHIFT) / b )
+#include "math.h"
 #include "stdio.h"
 #include "stdint.h"
 #include "stm32f30x_conf.h" // STM32 config

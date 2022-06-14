@@ -1,4 +1,7 @@
-Src/main.o: ../Src/main.c \
+Src/Bullets.o: ../Src/Bullets.c \
+ C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/Bullets.h \
+ C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/math.h \
+ C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/30010_io.h \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/stm32f30x_conf.h \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_adc.h \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/stm32f30x.h \
@@ -7,7 +10,6 @@ Src/main.o: ../Src/main.c \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/cmsis/core_cmFunc.h \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/cmsis/core_cm4_simd.h \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/system_stm32f30x.h \
- C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/stm32f30x_conf.h \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_can.h \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_crc.h \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_comp.h \
@@ -29,16 +31,11 @@ Src/main.o: ../Src/main.c \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_usart.h \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_wwdg.h \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_misc.h \
- C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/30010_io.h \
- C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/ansi.h \
- C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/30010_io.h \
- C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/ADCread.h \
- C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/ex2.h \
- C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/Bullets.h \
- C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/math.h \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/sinlut.h \
- C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/timer.h \
- C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/math.h
+ C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/ex2.h
+C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/Bullets.h:
+C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/math.h:
+C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/30010_io.h:
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/stm32f30x_conf.h:
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_adc.h:
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/stm32f30x.h:
@@ -47,7 +44,6 @@ C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/Programerin
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/cmsis/core_cmFunc.h:
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/cmsis/core_cm4_simd.h:
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/system_stm32f30x.h:
-C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/stm32f30x_conf.h:
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_can.h:
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_crc.h:
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_comp.h:
@@ -69,13 +65,5 @@ C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/Programerin
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_usart.h:
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_wwdg.h:
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_misc.h:
-C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/30010_io.h:
-C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/ansi.h:
-C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/30010_io.h:
-C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/ADCread.h:
-C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/ex2.h:
-C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/Bullets.h:
-C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/math.h:
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/sinlut.h:
-C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/timer.h:
-C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/math.h:
+C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/ex2.h:
