@@ -8,6 +8,7 @@
 #include "buzz.h"
 #include "PCBJoystick.h"
 #include "gameBoard.h"
+#include "letters.h"
 
 
 
@@ -49,6 +50,12 @@ int main(void) {
 
 	//	bgcolor(0);
 		makeBoard();
+		int32_t start = 20;
+		letters(0,start,start);
+		letters(1,start+13,start);
+		letters(1,start,start+7);
+
+
 
 	while(1){
 
@@ -63,6 +70,7 @@ int main(void) {
 		//	Testområde
 
 		buzz(buzzTest,&c, &flag);
+
 
 
 	}

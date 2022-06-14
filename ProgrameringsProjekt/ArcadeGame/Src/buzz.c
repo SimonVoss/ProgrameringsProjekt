@@ -1,7 +1,6 @@
 #include "stm32f30x_conf.h" // STM32 config
 #include "30010_io.h" 		// Input/output library for this course
 #include "buzz.h"
-#include "ex2.h"
 
 
 #define tid0 10000

@@ -28,6 +28,7 @@
 "./Src/buzz.o"
 "./Src/ex2.o"
 "./Src/gameBoard.o"
+"./Src/letters.o"
 "./Src/main.o"
 "./Src/player.o"
 "./Src/sprite.o"
