@@ -1,0 +1,4 @@
+../Src/PCBJoystick.c:16:6:PCBinfoJoystick	4	static
+../Src/PCBJoystick.c:62:9:PCBreadJoystick	24	static
+../Src/PCBJoystick.c:89:6:PCBinfoLED	4	static
+../Src/PCBJoystick.c:133:6:PCBsetLED	16	static

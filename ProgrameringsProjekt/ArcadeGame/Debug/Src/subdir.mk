@@ -8,6 +8,7 @@ C_SRCS += \
 ../Src/30010_io.c \
 ../Src/ADCread.c \
 ../Src/Bullets.c \
+../Src/PCBJoystick.c \
 ../Src/ansi.c \
 ../Src/buzz.c \
 ../Src/ex2.c \
@@ -24,6 +25,7 @@ OBJS += \
 ./Src/30010_io.o \
 ./Src/ADCread.o \
 ./Src/Bullets.o \
+./Src/PCBJoystick.o \
 ./Src/ansi.o \
 ./Src/buzz.o \
 ./Src/ex2.o \
@@ -40,6 +42,7 @@ C_DEPS += \
 ./Src/30010_io.d \
 ./Src/ADCread.d \
 ./Src/Bullets.d \
+./Src/PCBJoystick.d \
 ./Src/ansi.d \
 ./Src/buzz.d \
 ./Src/ex2.d \
@@ -60,7 +63,7 @@ Src/%.o Src/%.su: ../Src/%.c Src/subdir.mk
 clean: clean-Src
 
 clean-Src:
-	-$(RM) ./Src/30010_io.d ./Src/30010_io.o ./Src/30010_io.su ./Src/ADCread.d ./Src/ADCread.o ./Src/ADCread.su ./Src/Bullets.d ./Src/Bullets.o ./Src/Bullets.su ./Src/ansi.d ./Src/ansi.o ./Src/ansi.su ./Src/buzz.d ./Src/buzz.o ./Src/buzz.su ./Src/ex2.d ./Src/ex2.o ./Src/ex2.su ./Src/gameBoard.d ./Src/gameBoard.o ./Src/gameBoard.su ./Src/main.d ./Src/main.o ./Src/main.su ./Src/player.d ./Src/player.o ./Src/player.su ./Src/sprite.d ./Src/sprite.o ./Src/sprite.su ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/system_stm32f30x.d ./Src/system_stm32f30x.o ./Src/system_stm32f30x.su ./Src/timer.d ./Src/timer.o ./Src/timer.su
+	-$(RM) ./Src/30010_io.d ./Src/30010_io.o ./Src/30010_io.su ./Src/ADCread.d ./Src/ADCread.o ./Src/ADCread.su ./Src/Bullets.d ./Src/Bullets.o ./Src/Bullets.su ./Src/PCBJoystick.d ./Src/PCBJoystick.o ./Src/PCBJoystick.su ./Src/ansi.d ./Src/ansi.o ./Src/ansi.su ./Src/buzz.d ./Src/buzz.o ./Src/buzz.su ./Src/ex2.d ./Src/ex2.o ./Src/ex2.su ./Src/gameBoard.d ./Src/gameBoard.o ./Src/gameBoard.su ./Src/main.d ./Src/main.o ./Src/main.su ./Src/player.d ./Src/player.o ./Src/player.su ./Src/sprite.d ./Src/sprite.o ./Src/sprite.su ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/system_stm32f30x.d ./Src/system_stm32f30x.o ./Src/system_stm32f30x.su ./Src/timer.d ./Src/timer.o ./Src/timer.su
 
 .PHONY: clean-Src
 

@@ -2,7 +2,7 @@
 #include "30010_io.h" 		// Input/output library for this course
 #include "buzz.h"
 
-static int PRESCALER_VALUE = 9;
+static int PRESCALER_VALUE = 0x0009;
 void BuzzConfig(void){
 	RCC->APB1ENR |= 0x00000001; // Enable clock line to timer 2;
 	TIM2->CR1 = 0x0000; // Disable timer
@@ -42,19 +42,13 @@ int32_t i;
 			TIM2->EGR |= 0x01;
 			printf("%d\n",freq);
 			//wait 20ms
-			 while (flag == 0){
-				 delay(2000,&c,&flag);
-			 }
-			 flag = 0;
+//			 while (flag == 0){
+//				 delay(2000,&c,&flag);
+//			 }
+//			 flag = 0;
 
 		}
-		int freq = 0;
-		int PRESCALER_VALUE = 9;
-		uint32_t reload = 64e6 / freq / (PRESCALER_VALUE + 1) - 1;
-		TIM2->ARR = reload; // Set auto reload value
-		TIM2->CCR3 = reload/2; // Set compare register
-		TIM2->EGR |= 0x01;
-		printf("%d\n",freq);
+		TIM2->CR1 = 0x0000; // Disable timer
 
 	}
 	if(lyd == 1){

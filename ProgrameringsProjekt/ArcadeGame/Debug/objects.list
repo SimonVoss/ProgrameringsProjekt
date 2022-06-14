@@ -23,6 +23,7 @@
 "./Src/30010_io.o"
 "./Src/ADCread.o"
 "./Src/Bullets.o"
+"./Src/PCBJoystick.o"
 "./Src/ansi.o"
 "./Src/buzz.o"
 "./Src/ex2.o"

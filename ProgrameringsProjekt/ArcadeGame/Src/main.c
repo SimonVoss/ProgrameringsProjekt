@@ -42,13 +42,19 @@ int main(void) {
 	//Initialicering af Programmer i main Slut
 
 	//Hentning af Statisk info Start
-	buzz(0, &c, flag);
+
 
 
 
 	//Hentning af Statisk info Slut
 
 	//Klad af funktioner
+
+	int16_t a = PCBreadJoystick();
+	printf("%d\n",a);
+	if (a == 10){
+		buzz(0, &c, flag);
+	}
 
 
 	while(1){
@@ -57,10 +63,12 @@ int main(void) {
 
 
 
+
 		//Hentning af kontinuerlig info Slut
 
 
 //	Testområde
+
 
 	}
 }
