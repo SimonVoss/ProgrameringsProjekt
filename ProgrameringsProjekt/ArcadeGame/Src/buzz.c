@@ -2,6 +2,12 @@
 #include "30010_io.h" 		// Input/output library for this course
 #include "buzz.h"
 
+
+#define tid0 10000
+#define tid1 50000
+#define tid2 70000
+#define tid3 180000
+
 static int PRESCALER_VALUE = 9;
 void BuzzConfig(void){
 	RCC->APB1ENR |= 0x00000001; // Enable clock line to timer 2;
@@ -23,97 +29,93 @@ void BuzzConfig(void){
 	GPIOB->MODER |= (0x00000002 << (10 * 2)); // Set mode register
 
 	GPIO_PinAFConfig(GPIOB, GPIO_PinSource10, GPIO_AF_1);
+
+
+
 }
 void buzz(int32_t lyd, int32_t *c, int32_t *flag){
 int32_t i;
 	//sound effects
-	//0 - player losses a life 		27sec
-	//1 - Play shoots a bullet		23sec
-	//2 - player hits an enemy
-	//3 - Player hits an storoid
+	//0 - player moving
+	//1 - player shoots a bullet
+	//2 - Play gets hit
+	//3 - player hits an enemy / astoroid
 	//4 - new level
+
+	int32_t j, k;
+
+
 	if(lyd == 0){
 		TIM2->CR1 = 0x0000; // Disable timer
-		for (i=1; i<=20; i++){
+	}
 
-			printf("bob , %d\n",i);
-		}
+	if(lyd == 1){
+
+		for (i=1; i<3; i++){
 			int32_t freq = 500/i;
 			int32_t PRESCALER_VALUE = 9;
 			uint32_t reload = 64e6 / freq / (PRESCALER_VALUE + 1) - 1;
 			TIM2->ARR = reload; // Set auto reload value
 			TIM2->CCR3 = reload/2; // Set compare register
 			TIM2->EGR |= 0x01;
-			printf("%d , %d\n",freq,i);
-//			//wait 10ms
-		printf("test , %d \n",lyd);
-
-		TIM2->CR1 = 0x0000; // Disable timer
-
-	}
-	if(lyd == 1){
-		for (i=1000; i<=1200; i++){
-			int freq = i;
-			int PRESCALER_VALUE = 9;
-			uint32_t reload = 64e6 / freq / (PRESCALER_VALUE + 1) - 1;
-			TIM2->ARR = reload; // Set auto reload value
-			TIM2->CCR3 = reload/2; // Set compare register
-			TIM2->EGR |= 0x01;
-			printf("%d\n",freq);
-			//wait 1ms
+			printf("freq = %d , i = %d , lyd = %d\n",freq,i,lyd);
+			for(j=0;j<=tid0;j++){}
 		}
-		TIM2->CR1 = 0x0000; // Disable timer
-	}
-	if(lyd == 2){
-		for (i=1; i<=10; i++){
-			int freq = 1000/i;
-			int PRESCALER_VALUE = 9;
-			uint32_t reload = 64e6 / freq / (PRESCALER_VALUE + 1) - 1;
-			TIM2->ARR = reload; // Set auto reload value
-			TIM2->CCR3 = reload/2; // Set compare register
-			TIM2->EGR |= 0x01;
-			printf("%d\n",freq);
-			//wait 20ms
-		}
-		TIM2->CR1 = 0x0000; // Disable timer
-	}
-	if(lyd == 3){
-		for (i=50; i<=100; i++){
-			int freq = i;
-			int PRESCALER_VALUE = 9;
-			uint32_t reload = 64e6 / freq / (PRESCALER_VALUE + 1) - 1;
-			TIM2->ARR = reload; // Set auto reload value
-			TIM2->CCR3 = reload/2; // Set compare register
-			TIM2->EGR |= 0x01;
-			printf("%d\n",freq);
 			//wait 10ms
-		}
-		for (i=100; i<=50; i++){
-			int freq = i;
-			int PRESCALER_VALUE = 9;
+		TIM2->CR1 = 0x0000; // Disable timer
+	}
+
+	if(lyd == 2){
+
+		for (i=50; i>=3; i--){
+			int32_t freq = 2*i;
+			int32_t PRESCALER_VALUE = 9;
 			uint32_t reload = 64e6 / freq / (PRESCALER_VALUE + 1) - 1;
 			TIM2->ARR = reload; // Set auto reload value
 			TIM2->CCR3 = reload/2; // Set compare register
 			TIM2->EGR |= 0x01;
-			printf("%d\n",freq);
-			//wait 5ms
+			printf("freq = %d , i = %d , lyd = %d\n",freq,i,lyd);
+			for(j=0;j<=tid1;j++){}
 		}
+			//wait 10ms
 		TIM2->CR1 = 0x0000; // Disable timer
 	}
+
 	if(lyd == 4){
-		for (i=1; i<=10; i++){
-			int freq = 1000/i;
-			int PRESCALER_VALUE = 9;
+
+		for (i=1; i<=3; i++){
+			for (j=1;j<=2;j++){
+			int32_t freq = 200/j;
+			int32_t PRESCALER_VALUE = 9;
 			uint32_t reload = 64e6 / freq / (PRESCALER_VALUE + 1) - 1;
 			TIM2->ARR = reload; // Set auto reload value
 			TIM2->CCR3 = reload/2; // Set compare register
 			TIM2->EGR |= 0x01;
-			printf("%d\n",freq);
-			//wait 20ms
+			printf("freq = %d , i = %d , lyd = %d\n",freq,i,lyd);
+			for(k=0;k<=tid2;k++){}
+			}
+
 		}
+			//wait 10ms
 		TIM2->CR1 = 0x0000; // Disable timer
 	}
-			
+
+	if(lyd == 8){
+
+		for (i=1; i<=5; i++){
+			int32_t freq = 250*i;
+			int32_t PRESCALER_VALUE = 9;
+			uint32_t reload = 64e6 / freq / (PRESCALER_VALUE + 1) - 1;
+			TIM2->ARR = reload; // Set auto reload value
+			TIM2->CCR3 = reload/2; // Set compare register
+			TIM2->EGR |= 0x01;
+			printf("freq = %d , i = %d , lyd = %d\n",freq,i,lyd);
+			for(j=0;j<=tid3;j++){}
+		}
+			//wait 10ms
+		TIM2->CR1 = 0x0000; // Disable timer
+	}
+
 
 
 }

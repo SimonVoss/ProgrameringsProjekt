@@ -19,7 +19,7 @@ static int32_t c = 0<<8;
 //Initialicering af Programmer Start
 void TIM1_BRK_TIM15_IRQHandler(void) {
 	c=c+(1<<8);
-	TIM2->SR &= ~0x0001; // Clear interrupt bit
+	TIM15->SR &= ~0x0001; // Clear interrupt bit
 }
 //Initialicering af Programmer Slut
 
@@ -33,6 +33,7 @@ int main(void) {
 	ADCConfig();
 	BuzzConfig();
 	clockInit();
+	PCBinfoJoystick();
 
 	//Initialicering af Programmer i main Slut
 
@@ -44,17 +45,17 @@ int main(void) {
 	//Hentning af Statisk info Slut
 
 	//Klad af funktioner
-	buzz(5,&c, &flag);
-	TIM2->CR1 = 0x0000; // Disable timer
-	int i;
-	for (i=1; i<=20; i++){
-
-		printf("bob , %d\n",i);
-	}
+//	bgcolor(0);
+//	makeBoard();
 
 	while(1){
 		//Hentning af kontinuerlig info Start
-		int JoystickWay = ADCread();
+
+
+
+
+
+
 
 
 
@@ -64,6 +65,12 @@ int main(void) {
 
 
 //	Testområde
+
+
+				int32_t JoystickWay = ADCread();
+				int32_t a = PCBreadJoystick();
+				buzz(a,&c, &flag);
+				printf("%d\n",a);
 
 
 	}
