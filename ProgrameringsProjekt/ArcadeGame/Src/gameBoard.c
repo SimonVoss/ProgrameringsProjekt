@@ -1,8 +1,8 @@
 #include "gameBoard.h"
 
 
-//1,1 til 124,133
-//x-akse man kan bruge 2-132
+//1,1 til 124,137
+//x-akse man kan bruge 2-136
 //y-akse man kan bruge 2-123
 void makeBorder(void) {
 	int32_t i;

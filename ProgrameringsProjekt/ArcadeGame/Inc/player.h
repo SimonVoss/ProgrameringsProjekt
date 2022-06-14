@@ -11,5 +11,6 @@ typedef struct {
 } goodShip;
 
 void createPlayer(goodShip *player);
+void movePlayer(goodShip *player, int32_t joystick);
 
 #endif /* PLAYER_H_ */
