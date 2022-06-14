@@ -3102,8 +3102,8 @@ int main(void) {
  80018d2:	f7ff fe29 	bl	8001528 <ADCread>
  80018d6:	6078      	str	r0, [r7, #4]
 
-	buzz(30);
- 80018d8:	201e      	movs	r0, #30
+	buzz(120);
+ 80018d8:	2078      	movs	r0, #120	; 0x78
  80018da:	f7ff fe55 	bl	8001588 <buzz>
 	while(1){
  80018de:	e7fe      	b.n	80018de <main+0x22>

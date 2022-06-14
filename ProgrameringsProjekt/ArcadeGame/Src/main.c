@@ -97,7 +97,7 @@ int main(void) {
 	//Hentning af info Start
 	int JoystickWay = ADCread();
 
-	buzz(30);
+	buzz(120);
 	while(1){
 
 //	clockInit();
