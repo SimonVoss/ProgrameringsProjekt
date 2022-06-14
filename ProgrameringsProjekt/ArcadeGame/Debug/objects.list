@@ -28,6 +28,7 @@
 "./Src/ex2.o"
 "./Src/gameBoard.o"
 "./Src/main.o"
+"./Src/player.o"
 "./Src/sprite.o"
 "./Src/syscalls.o"
 "./Src/sysmem.o"
