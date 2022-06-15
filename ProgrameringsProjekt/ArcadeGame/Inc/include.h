@@ -25,6 +25,7 @@ typedef struct {
 #include "enemy.h"
 #include "player.h"
 #include "timer.h"
+#include "lcd.h"
 
 
 

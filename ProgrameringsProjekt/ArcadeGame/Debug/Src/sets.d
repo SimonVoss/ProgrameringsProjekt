@@ -1,5 +1,5 @@
-Src/bullets.o: ../Src/bullets.c \
- C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/bullets.h \
+Src/sets.o: ../Src/sets.c \
+ C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/sets.h \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/include.h \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/stm32f30x_conf.h \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_adc.h \
@@ -44,7 +44,7 @@ Src/bullets.o: ../Src/bullets.c \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/timer.h \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/lcd.h \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/sets.h
-C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/bullets.h:
+C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/sets.h:
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/include.h:
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/stm32f30x_conf.h:
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_adc.h:

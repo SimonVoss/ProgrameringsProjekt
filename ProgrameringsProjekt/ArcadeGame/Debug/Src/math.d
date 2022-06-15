@@ -41,6 +41,8 @@ Src/math.o: ../Src/math.c \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/enemy.h \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/player.h \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/timer.h \
+ C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/lcd.h \
+ C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/sets.h \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/sinlut.h
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/math.h:
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/include.h:
@@ -84,4 +86,6 @@ C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/Programerin
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/enemy.h:
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/player.h:
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/timer.h:
+C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/lcd.h:
+C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/sets.h:
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/sinlut.h:

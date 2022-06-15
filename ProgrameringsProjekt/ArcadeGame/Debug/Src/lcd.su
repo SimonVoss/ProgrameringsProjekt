@@ -1,0 +1,2 @@
+../Src/lcd.c:3:6:lcd_write_string	40	static
+../Src/lcd.c:13:6:lcd_write_heart	40	static

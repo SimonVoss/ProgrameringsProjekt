@@ -41,7 +41,9 @@ Src/include.o: ../Src/include.c \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/gameBoard.h \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/enemy.h \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/player.h \
- C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/timer.h
+ C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/timer.h \
+ C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/lcd.h \
+ C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/sets.h
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/include.h:
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/stm32f30x_conf.h:
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/SPL/inc/stm32f30x_adc.h:
@@ -85,3 +87,5 @@ C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/Programerin
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/enemy.h:
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/player.h:
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/timer.h:
+C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/lcd.h:
+C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/sets.h:
