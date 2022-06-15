@@ -1,14 +1,4 @@
-#include <bullets.h>
-#include "stm32f30x_conf.h" // STM32 config
-#include "30010_io.h" 		// Input/output library for this course
-#include "ansi.h"
-#include "ADCread.h"
-#include "ex2.h"
-#include "timer.h"
-#include "buzz.h"
-#include "PCBJoystick.h"
-#include "gameBoard.h"
-#include "letters.h"
+#include "include.h"
 
 
 
@@ -17,61 +7,53 @@ static int32_t c = 0<<8;
 
 
 
+
 //Initialicering af Programmer Start
-void TIM1_BRK_TIM15_IRQHandler(void) {
+
+
+
+void TIM2_IRQHandler(void) {
 	c=c+(1<<8);
-	TIM15->SR &= ~0x0001; // Clear interrupt bit
+	TIM2->SR &= ~0x0001; // Clear interrupt bit
 }
+
 
 //Initialicering af Programmer Slut
 
 
 int main(void) {
 	//Initialicering af forbindelse
-	uart_init(115200);
-
-
+	uart_init(1000000);
+	int32_t i;
+	color(15,0);
 	//Initialicering af Programmer i main Start
-	ADCConfig();
-	BuzzConfig();
-	clockInit();
-	PCBinfoJoystick();
-
+	config();
+	//BuzzConfig();
+	makeBoard();
+	goodShip player;
+	createPlayer(&player);
+	badShip enemy;
+	createEnemy(&enemy);
 	//Initialicering af Programmer i main Slut
 
-
-	//Statisk info Start
-
-
+	//Hentning af Statisk info Start
+	//buzz(200);
 
 
-	//Statisk info Slut
+	//Hentning af Statisk info Slut
 
-
-	//	bgcolor(0);
-		makeBoard();
-		int32_t start = 20;
-		letters(0,start,start);
-		letters(1,start+13,start);
-		letters(1,start,start+7);
-
-
-
+	//Klad af funktioner
 	while(1){
-
 		//Hentning af kontinuerlig info Start
-
-		int32_t JoystickWay = ADCread();
-		int32_t buzzTest = PCBreadJoystick();
+		int32_t joystickWay = ADCread();
+		movePlayer(&player, joystickWay);
+		moveEnemy(&enemy);
+		for(i=0; i<=100000;i++){}
 
 		//Hentning af kontinuerlig info Slut
 
 
-		//	Testområde
-
-		buzz(buzzTest,&c, &flag);
-
-
+//	Testområde
 
 	}
 }

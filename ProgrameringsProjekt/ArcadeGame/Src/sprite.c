@@ -52,6 +52,7 @@ void playerRemove(int32_t x, int32_t y) {
 }
 
 
+
 void enemyDraw(int32_t x, int32_t y) {
 	fgcolor(1);
 	gotoxy(x-3,y);

@@ -1,5 +1,4 @@
-#include <bullets.h>
-#include "ex2.h"
+#include "bullets.h"
 
 void bulletSpaceship(int32_t x, int32_t y, bulletPos *a){
 	a->x = x<<8;

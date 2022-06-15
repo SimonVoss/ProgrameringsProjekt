@@ -1,9 +1,8 @@
-
 #ifndef ADCREAD_H_
 #define ADCREAD_H_
 
+#include "include.h"
 
-void ADCConfig(void);
-int ADCread(void);
+int32_t ADCread(void);
 
 #endif

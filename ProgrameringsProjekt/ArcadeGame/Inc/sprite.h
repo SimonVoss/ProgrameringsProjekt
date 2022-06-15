@@ -2,11 +2,7 @@
 #define SPRITE_H_
 
 //includes
-#include "30010_io.h"
-#include "stdint.h"
-#include "stdio.h"
-#include "ansi.h"
-#include "ex2.h"
+#include "include.h"
 
 void playerDraw(int32_t x, int32_t y);
 void playerRemove(int32_t x, int32_t y);

@@ -1,8 +1,7 @@
 
 #ifndef BULLETS_H_
 #define BULLETS_H_
-#include "stdio.h"
-#include "stdint.h"
+#include "include.h"
 
 typedef struct {
 	int32_t x,y;
