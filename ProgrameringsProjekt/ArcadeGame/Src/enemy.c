@@ -14,8 +14,6 @@ void createEnemy(badShip *enemy) {
 
 	randSpawn += ADC_GetConversionValue(ADC1);
 	randSpawn = randSpawn%10;
-	gotoxy(2,2);
-	printf("%0ld",randSpawn);
 	enemy->x = 10+randSpawn*13;
 	enemy->y = 10;
 	enemy->exist=1;
