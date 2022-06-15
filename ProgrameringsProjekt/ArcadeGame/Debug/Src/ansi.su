@@ -2,3 +2,10 @@
 ../Src/ansi.c:24:6:bgcolor	16	static
 ../Src/ansi.c:46:6:color	32	static
 ../Src/ansi.c:56:6:resetbgcolor	8	static
+../Src/ansi.c:61:6:clrsrc	8	static
+../Src/ansi.c:65:6:clreol	8	static
+../Src/ansi.c:69:6:gotoxy	16	static
+../Src/ansi.c:73:6:underline	16	static
+../Src/ansi.c:82:6:blink	16	static
+../Src/ansi.c:91:6:inverse	16	static
+../Src/ansi.c:100:6:window	112	dynamic

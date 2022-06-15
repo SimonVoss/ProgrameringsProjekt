@@ -1,0 +1,3 @@
+../Src/enemy.c:3:6:createEnemy	24	static
+../Src/enemy.c:23:6:moveEnemy	16	static
+../Src/enemy.c:31:6:slideEnemy	16	static

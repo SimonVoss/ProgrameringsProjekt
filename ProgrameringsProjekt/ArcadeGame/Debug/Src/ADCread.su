@@ -1,2 +1,1 @@
-../Src/ADCread.c:5:6:ADCConfig	16	static
-../Src/ADCread.c:40:5:ADCread	16	static
+../Src/ADCread.c:4:9:ADCread	16	static

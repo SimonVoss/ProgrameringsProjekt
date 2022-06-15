@@ -1,7 +1,0 @@
-../Src/ex2.c:4:6:clrsrc	8	static
-../Src/ex2.c:8:6:clreol	8	static
-../Src/ex2.c:12:6:gotoxy	16	static
-../Src/ex2.c:16:6:underline	16	static
-../Src/ex2.c:25:6:blink	16	static
-../Src/ex2.c:34:6:inverse	16	static
-../Src/ex2.c:43:6:window	112	dynamic

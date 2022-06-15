@@ -6,6 +6,17 @@
 #include "stdint.h"
 #include "stdio.h"
 #include "ansi.h"
+
+typedef struct {
+	int16_t x, y;
+}vector_t;
+
+typedef struct {
+	int16_t x, y, alive;
+	vector_t vec;
+} bullet;
+
+#include "math.h"
 #include "config.h"
 #include "sprite.h"
 #include "bullets.h"
@@ -14,6 +25,9 @@
 #include "enemy.h"
 #include "player.h"
 #include "timer.h"
+
+
+
 
 
 #endif /* INCLUDE_H_ */
