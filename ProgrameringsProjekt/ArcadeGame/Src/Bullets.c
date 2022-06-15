@@ -24,7 +24,7 @@ void bulletSpaceship(int8_t x, int8_t y, bullet a[]){
 			gotoxy(x,y);
 			fgcolor(2);
 			printf("%c",254);
-			return;
+			break;
 		}
 	}
 
