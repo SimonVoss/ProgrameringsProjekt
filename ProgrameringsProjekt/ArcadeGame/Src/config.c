@@ -33,6 +33,13 @@ void pinConfig(void) {
 	GPIOC->PUPDR &= ~(0x00000003 << (1 * 2)); 		// Clear push/pull register
 	GPIOC->PUPDR |= (0x00000002 << (1 * 2)); 		// Set push/pull register (0x00 -
 											 	 	//No pull, 0x01 - Pull-up, 0x02 - Pull-down)
+	//pin C2
+	GPIOC->MODER &= ~(0x00000003 << (2 * 2)); 		// Clear mode register
+	GPIOC->MODER |= (0x00000000 << (2 * 2)); 		// Set mode register (0x00 – Input, 0x01 - Output, 0x02 -
+											 	 	//Alternate Function, 0x03 - Analog in/out)
+	GPIOC->PUPDR &= ~(0x00000003 << (2 * 2)); 		// Clear push/pull register
+	GPIOC->PUPDR |= (0x00000002 << (2 * 2)); 		// Set push/pull register (0x00 -
+											 	 	//No pull, 0x01 - Pull-up, 0x02 - Pull-down)
 
 	//pin C3
 	GPIOC->MODER &= ~(0x00000003 << (3 * 2)); 		// Clear mode register

@@ -1,7 +1,7 @@
-#include "adcRead.h"
+#include <analog.h>
 
 
-int32_t ADCread(){
+int8_t adcRead(void){
 
 	ADC_RegularChannelConfig(ADC1, ADC_Channel_9, 1, ADC_SampleTime_1Cycles5);
 
@@ -17,4 +17,19 @@ int32_t ADCread(){
 	}else {
 		return 0;
 	}
+}
+
+
+int8_t buttonRead(void) {
+	int16_t a = 0;
+	int16_t b1 = GPIOC->IDR & (0x0001 << 0);
+	int16_t b2 = GPIOC->IDR & (0x0001 << 1);
+
+	if(b1) {
+		a += 1;
+	}
+	if(b2) {
+		a += 2;
+	}
+	return a;
 }

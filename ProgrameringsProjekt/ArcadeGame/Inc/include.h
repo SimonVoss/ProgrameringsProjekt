@@ -5,19 +5,28 @@
 #include "30010_io.h"
 #include "stdint.h"
 #include "stdio.h"
-#include "ansi.h"
+
+//structs
 
 typedef struct {
 	int16_t x, y;
 }vector_t;
 
 typedef struct {
-	int16_t x, y, alive;
+	int32_t x, y, alive;
 	vector_t vec;
 } bullet;
 
+typedef struct {
+	uint32_t x,y,alive;
+} badShip;
+
+//more includes
+
+#include "ansi.h"
 #include "math.h"
 #include "config.h"
+#include "analog.h"
 #include "sprite.h"
 #include "bullets.h"
 #include "buzz.h"
@@ -25,8 +34,6 @@ typedef struct {
 #include "enemy.h"
 #include "player.h"
 #include "timer.h"
-#include "lcd.h"
-
 
 
 

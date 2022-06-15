@@ -12,27 +12,33 @@ void clockInit(){
 	TIM15->CR1 |= 0x0001; // Enable timer
 }
 
-void clockCounter(int32_t score,int32_t *cE,int32_t *cF,int16_t *flagF, int16_t *flagE){
+void clockCounter(int32_t score,int32_t *c1,int32_t *c2,int32_t *c3,int16_t *flagF, int16_t *flagE, int16_t *flagR){
 	int32_t nextInterval = 100<<8;
-	int32_t time = 100<<8;
+	int32_t time = 1000<<8;
 	if (score < nextInterval){
-		if (*cF >= time>>1){
+		if (*c1 >= time>>1){
 			*flagF = 1;
-			*cF=0;
+			*c1=0;
 		}
-		if (*cE >= time){
+		if (*c2 >= time<<1){
 			*flagE = 1;
-			*cE=0;
+			*c2=0;
 		}
+		if (*c3>= time<<5){
+			*flagR = 1;
+			*c3=0;
+
+		}
+
 	}else if (score == nextInterval){
 		time = FIX8_MULT(time, 0xCC);
-		if (*cF >= time>>1){
+		if (*c1 >= time>>1){
 			*flagF = 1;
-			*cF=0;
+			*c1=0;
 		}
-		if (*cE >= time){
+		if (*c2 >= time){
 			*flagE = 1;
-			*cE=0;
+			*c2=0;
 		}
 		nextInterval = nextInterval<<1;
 	}

@@ -6,7 +6,7 @@
 #include "include.h"
 
 void clockInit();
-void clockCounter(int32_t score,int32_t *cE,int32_t *cF,int16_t *flagF, int16_t *flagE);
+void clockCounter(int32_t score,int32_t *c1,int32_t *c2,int32_t *c3,int16_t *flagF, int16_t *flagE, int16_t *flagR);
 
 
 

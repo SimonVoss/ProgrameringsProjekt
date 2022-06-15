@@ -3,13 +3,11 @@
 
 #include "include.h"
 
-typedef struct {
-	uint32_t x,y,exist;
-} badShip;
 
-void createEnemy(badShip *enemy);
-void moveEnemy(badShip *enemy);
-void slideEnemy(badShip *enemy);
+void initArrayEnemy(badShip a[], int8_t length);
+void createEnemy(badShip a[]);
+void moveEnemy(badShip a[]);
+int16_t slideEnemy(badShip a);
 
 
 

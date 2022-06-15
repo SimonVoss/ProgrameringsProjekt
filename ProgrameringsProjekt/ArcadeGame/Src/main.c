@@ -2,8 +2,8 @@
 
 
 
-static int32_t flag = 0;
-static int32_t c = 0<<8;
+static int16_t flagF, flagE, flagR = 0;
+static int32_t c1, c2, c3 = 0<<8;
 
 
 
@@ -12,9 +12,11 @@ static int32_t c = 0<<8;
 
 
 
-void TIM2_IRQHandler(void) {
-	c=c+(1<<8);
-	TIM2->SR &= ~0x0001; // Clear interrupt bit
+void TIM1_BRK_TIM15_IRQHandler(void) {
+	c1=c1+(1<<8);
+	c2=c2+(1<<8);
+	c3=c3+(1<<8);
+	TIM15->SR &= ~0x0001; // Clear interrupt bit
 }
 
 
@@ -23,17 +25,24 @@ void TIM2_IRQHandler(void) {
 
 int main(void) {
 	//Initialicering af forbindelse
-	uart_init(1000000);
+	uart_init(2060000);
 	int32_t i;
+	int8_t timeOut = 0;
 	color(15,0);
 	//Initialicering af Programmer i main Start
 	config();
+	clockInit();
 	//BuzzConfig();
 	makeBoard();
 	goodShip player;
 	createPlayer(&player);
-	badShip enemy;
-	createEnemy(&enemy);
+	badShip enemyA[20];
+	initArrayEnemy(&enemyA, 20);
+	bullet bulletE[50];
+	bullet bulletF[50];
+	initArrayBullets(&bulletE, 50);
+	initArrayBullets(&bulletF, 50);
+
 	//Initialicering af Programmer i main Slut
 
 	//Hentning af Statisk info Start
@@ -44,11 +53,37 @@ int main(void) {
 
 	//Klad af funktioner
 	while(1){
+		int8_t button = buttonRead();
+		int8_t joystickWay = ADCread();
+		clockCounter(0<<8, &c1, &c2, &c3, &flagF, &flagE, &flagR);
 		//Hentning af kontinuerlig info Start
-		int32_t joystickWay = ADCread();
-		movePlayer(&player, joystickWay);
-		moveEnemy(&enemy);
-		for(i=0; i<=100000;i++){}
+		if (flagF == 1){
+			movePlayer(&player, joystickWay);
+			if(button==1) {
+				if(timeOut==0) {
+					bulletSpaceship(player.x, player.y-1, &bulletF);
+					timeOut++;
+				}
+			}
+			if(timeOut>0 && timeOut<7) {
+				timeOut++;
+			} else {
+				timeOut=0;
+			}
+			updateBulletFriendly(&bulletF);
+			bulletHitEnemy(&bulletF, &enemyA);
+			flagF = 0;
+		}
+		if (flagE == 1){
+			moveEnemy(&enemyA);
+			flagE = 0;
+		}
+		if (flagR == 1) {
+			createEnemy(&enemyA);
+			flagR = 0;
+		}
+
+
 
 		//Hentning af kontinuerlig info Slut
 

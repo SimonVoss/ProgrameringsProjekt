@@ -6,9 +6,10 @@
 
 
 void initArrayBullets(bullet a[], int8_t lenght);
-void bulletSpaceship(int8_t x, int8_t y, bullet a[]);
-void bulletEnemy(int8_t x, int8_t y, bullet a[]);
+void bulletSpaceship(int16_t x, int16_t y, bullet a[]);
+void bulletEnemy(int16_t x, int16_t y, bullet a[]);
 void updateBulletFriendly(bullet a[]);
 void updateBulletEnemy(bullet a[]);
+void bulletHitEnemy(bullet a[], badShip b[]);
 
 #endif /* BULLETS_H_ */
