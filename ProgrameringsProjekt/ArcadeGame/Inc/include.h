@@ -13,7 +13,7 @@ typedef struct {
 }vector_t;
 
 typedef struct {
-	int32_t x, y, alive;
+	int32_t x, y, alive, enemy;
 	vector_t vec;
 } bullet;
 

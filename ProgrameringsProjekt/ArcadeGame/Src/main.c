@@ -4,6 +4,7 @@
 
 static int16_t flagF, flagE, flagR = 0;
 static int32_t c1, c2, c3 = 0<<8;
+static int32_t score = 0;
 
 
 
@@ -54,8 +55,8 @@ int main(void) {
 	//Klad af funktioner
 	while(1){
 		int8_t button = buttonRead();
-		int8_t joystickWay = ADCread();
-		clockCounter(0<<8, &c1, &c2, &c3, &flagF, &flagE, &flagR);
+		int8_t joystickWay = adcRead();
+		clockCounter(score, &c1, &c2, &c3, &flagF, &flagE, &flagR);
 		//Hentning af kontinuerlig info Start
 		if (flagF == 1){
 			movePlayer(&player, joystickWay);
@@ -71,7 +72,8 @@ int main(void) {
 				timeOut=0;
 			}
 			updateBulletFriendly(&bulletF);
-			bulletHitEnemy(&bulletF, &enemyA);
+			updateBulletEnemy(&bulletE);
+			score = bulletHitEnemy(&bulletF, &enemyA, score);
 			flagF = 0;
 		}
 		if (flagE == 1){
@@ -79,11 +81,13 @@ int main(void) {
 			flagE = 0;
 		}
 		if (flagR == 1) {
+			bulletEnemy(&enemyA, &bulletE);
 			createEnemy(&enemyA);
 			flagR = 0;
 		}
-
-
+		gotoxy(3,2);
+		fgcolor(15);
+		printf("%d",score);
 
 		//Hentning af kontinuerlig info Slut
 
