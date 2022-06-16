@@ -34,6 +34,7 @@ Src/math.o: ../Src/math.c \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/ansi.h \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/math.h \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/config.h \
+ C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/analog.h \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/sprite.h \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/bullets.h \
  C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/buzz.h \
@@ -79,6 +80,7 @@ C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/Programerin
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/ansi.h:
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/math.h:
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/config.h:
+C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/analog.h:
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/sprite.h:
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/bullets.h:
 C:/Users/Sigurd/Desktop/Programmerings\ projekt/ProgrameringsProjekt/ProgrameringsProjekt/ArcadeGame/Inc/buzz.h:

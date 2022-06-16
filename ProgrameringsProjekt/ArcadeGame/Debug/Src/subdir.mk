@@ -6,10 +6,10 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../Src/30010_io.c \
-../Src/ADCread.c \
+../Src/Bullets.c \
 ../Src/PCBJoystick.c \
+../Src/analog.c \
 ../Src/ansi.c \
-../Src/bullets.c \
 ../Src/buzz.c \
 ../Src/config.c \
 ../Src/enemy.c \
@@ -30,10 +30,10 @@ C_SRCS += \
 
 OBJS += \
 ./Src/30010_io.o \
-./Src/ADCread.o \
+./Src/Bullets.o \
 ./Src/PCBJoystick.o \
+./Src/analog.o \
 ./Src/ansi.o \
-./Src/bullets.o \
 ./Src/buzz.o \
 ./Src/config.o \
 ./Src/enemy.o \
@@ -54,10 +54,10 @@ OBJS += \
 
 C_DEPS += \
 ./Src/30010_io.d \
-./Src/ADCread.d \
+./Src/Bullets.d \
 ./Src/PCBJoystick.d \
+./Src/analog.d \
 ./Src/ansi.d \
-./Src/bullets.d \
 ./Src/buzz.d \
 ./Src/config.d \
 ./Src/enemy.d \
@@ -84,7 +84,7 @@ Src/%.o Src/%.su: ../Src/%.c Src/subdir.mk
 clean: clean-Src
 
 clean-Src:
-	-$(RM) ./Src/30010_io.d ./Src/30010_io.o ./Src/30010_io.su ./Src/ADCread.d ./Src/ADCread.o ./Src/ADCread.su ./Src/PCBJoystick.d ./Src/PCBJoystick.o ./Src/PCBJoystick.su ./Src/ansi.d ./Src/ansi.o ./Src/ansi.su ./Src/bullets.d ./Src/bullets.o ./Src/bullets.su ./Src/buzz.d ./Src/buzz.o ./Src/buzz.su ./Src/config.d ./Src/config.o ./Src/config.su ./Src/enemy.d ./Src/enemy.o ./Src/enemy.su ./Src/gameBoard.d ./Src/gameBoard.o ./Src/gameBoard.su ./Src/include.d ./Src/include.o ./Src/include.su ./Src/lcd.d ./Src/lcd.o ./Src/lcd.su ./Src/letters.d ./Src/letters.o ./Src/letters.su ./Src/main.d ./Src/main.o ./Src/main.su ./Src/math.d ./Src/math.o ./Src/math.su ./Src/player.d ./Src/player.o ./Src/player.su ./Src/sets.d ./Src/sets.o ./Src/sets.su ./Src/sinlut.d ./Src/sinlut.o ./Src/sinlut.su ./Src/sprite.d ./Src/sprite.o ./Src/sprite.su ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/system_stm32f30x.d ./Src/system_stm32f30x.o ./Src/system_stm32f30x.su ./Src/timer.d ./Src/timer.o ./Src/timer.su
+	-$(RM) ./Src/30010_io.d ./Src/30010_io.o ./Src/30010_io.su ./Src/Bullets.d ./Src/Bullets.o ./Src/Bullets.su ./Src/PCBJoystick.d ./Src/PCBJoystick.o ./Src/PCBJoystick.su ./Src/analog.d ./Src/analog.o ./Src/analog.su ./Src/ansi.d ./Src/ansi.o ./Src/ansi.su ./Src/buzz.d ./Src/buzz.o ./Src/buzz.su ./Src/config.d ./Src/config.o ./Src/config.su ./Src/enemy.d ./Src/enemy.o ./Src/enemy.su ./Src/gameBoard.d ./Src/gameBoard.o ./Src/gameBoard.su ./Src/include.d ./Src/include.o ./Src/include.su ./Src/lcd.d ./Src/lcd.o ./Src/lcd.su ./Src/letters.d ./Src/letters.o ./Src/letters.su ./Src/main.d ./Src/main.o ./Src/main.su ./Src/math.d ./Src/math.o ./Src/math.su ./Src/player.d ./Src/player.o ./Src/player.su ./Src/sets.d ./Src/sets.o ./Src/sets.su ./Src/sinlut.d ./Src/sinlut.o ./Src/sinlut.su ./Src/sprite.d ./Src/sprite.o ./Src/sprite.su ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/system_stm32f30x.d ./Src/system_stm32f30x.o ./Src/system_stm32f30x.su ./Src/timer.d ./Src/timer.o ./Src/timer.su
 
 .PHONY: clean-Src
 

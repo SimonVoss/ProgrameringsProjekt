@@ -27,8 +27,12 @@ void TIM1_BRK_TIM15_IRQHandler(void) {
 int main(void) {
 	//Initialicering af forbindelse
 	uart_init(2060000);
-	int32_t i;
+//	int32_t i;
 	int8_t timeOut = 0;
+	int16_t buffer[512];
+	char lives[7] = {'L','i','v','e','s',':','\0'};
+	lcd_write_string(lives, &buffer,2*128);
+	lcd_write_heart(1,3,&buffer,3*128);
 	color(15,0);
 	//Initialicering af Programmer i main Start
 	config();
@@ -74,6 +78,7 @@ int main(void) {
 			updateBulletFriendly(&bulletF);
 			updateBulletEnemy(&bulletE);
 			score = bulletHitEnemy(&bulletF, &enemyA, score);
+			createScoreLCD(score,&buffer);
 			flagF = 0;
 		}
 		if (flagE == 1){
@@ -85,9 +90,6 @@ int main(void) {
 			createEnemy(&enemyA);
 			flagR = 0;
 		}
-		gotoxy(3,2);
-		fgcolor(15);
-		printf("%d",score);
 
 		//Hentning af kontinuerlig info Slut
 

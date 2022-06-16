@@ -1,5 +1,6 @@
-../Src/bullets.c:3:6:initArrayBullets	24	static
-../Src/bullets.c:15:6:bulletSpaceship	24	static
-../Src/bullets.c:33:6:bulletEnemy	24	static
-../Src/bullets.c:50:6:updateBulletFriendly	40	static
-../Src/bullets.c:79:6:updateBulletEnemy	40	static
+../Src/Bullets.c:3:6:initArrayBullets	24	static
+../Src/Bullets.c:16:6:bulletSpaceship	24	static
+../Src/Bullets.c:34:6:bulletEnemy	24	static
+../Src/Bullets.c:56:6:updateBulletFriendly	40	static
+../Src/Bullets.c:89:6:updateBulletEnemy	40	static
+../Src/Bullets.c:123:9:bulletHitEnemy	32	static

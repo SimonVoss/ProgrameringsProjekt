@@ -1,0 +1,2 @@
+../Src/analog.c:4:8:adcRead	16	static
+../Src/analog.c:23:8:buttonRead	16	static
