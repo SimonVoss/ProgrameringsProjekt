@@ -18,7 +18,7 @@ void createEnemy(badShip a[]) {
 			ADC_StartConversion(ADC1); // Start ADC read
 			while (ADC_GetFlagStatus(ADC1, ADC_FLAG_EOC) == 0); // Wait for ADC read
 
-			uint32_t randSpawn = ADC_GetConversionValue(ADC1);
+			uint16_t randSpawn = ADC_GetConversionValue(ADC1);
 			ADC_RegularChannelConfig(ADC1, ADC_Channel_2, 1, ADC_SampleTime_1Cycles5);
 
 			ADC_StartConversion(ADC1); // Start ADC read

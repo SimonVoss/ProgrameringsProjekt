@@ -27,8 +27,8 @@ void TIM1_BRK_TIM15_IRQHandler(void) {
 int main(void) {
 	//Initialicering af forbindelse
 	uart_init(500000);
-	int32_t i;
 	int8_t timeOut = 0;
+	int8_t aSpawn = 0;
 	color(15,0);
 	//Initialicering af Programmer i main Start
 	config();
@@ -38,18 +38,20 @@ int main(void) {
 	goodShip player;
 	createPlayer(&player);
 	badShip enemyA[20];
-	initArrayEnemy(&enemyA, 20);
+	initArrayEnemy(enemyA, 20);
 	bullet bulletE[50];
 	bullet bulletF[50];
-	initArrayBullets(&bulletE, 50);
-	initArrayBullets(&bulletF, 50);
+	initArrayBullets(bulletE, 50);
+	initArrayBullets(bulletF, 50);
+	bigRock astroidA[5];
+	initArrayAstroid(astroidA, 5);
 
 	//Initialicering af Programmer i main Slut
 
 	//Hentning af Statisk info Start
 	//buzz(200);
-
-
+//	for(int i = 0;i<100000;i++);
+//	moveAstroid(&astroidA);
 	//Hentning af Statisk info Slut
 
 	//Klad af funktioner
@@ -62,7 +64,7 @@ int main(void) {
 			movePlayer(&player, joystickWay);
 			if(button==1) {
 				if(timeOut==0) {
-					bulletSpaceship(player.x, player.y-1, &bulletF);
+					bulletSpaceship(player.x, player.y-1, bulletF);
 					timeOut++;
 				}
 			}
@@ -71,10 +73,13 @@ int main(void) {
 			} else {
 				timeOut=0;
 			}
-			updateBulletFriendly(&bulletF);
-			updateBulletEnemy(&bulletE);
-			score = bulletHitEnemy(&bulletF, &enemyA, score);
-			bulletHitPlayer(&bulletE, &player);
+			updateBulletFriendly(bulletF);
+			updateBulletEnemy(bulletE);
+			score = bulletHitEnemy(bulletF, enemyA, score);
+			bulletHitPlayer(bulletE, &player);
+			bulletHitAstroid(bulletE, astroidA);
+			bulletHitAstroid(bulletF, astroidA);
+			collision(enemyA, astroidA, &player);
 			if(player.life==0) {
 				playerRemove(player.x,player.y);
 				while(1) {}
@@ -82,12 +87,20 @@ int main(void) {
 			flagF = 0;
 		}
 		if (flagE == 1){
-			moveEnemy(&enemyA, &player);
+			moveEnemy(enemyA, &player);
+			moveAstroid(astroidA);
 			flagE = 0;
 		}
 		if (flagR == 1) {
-			bulletEnemy(&enemyA, &bulletE);
-			createEnemy(&enemyA);
+			bulletEnemy(enemyA, bulletE);
+			if(aSpawn < 4) {
+//				createAstroid(astroidA);
+				createEnemy(enemyA);
+				aSpawn++;
+			} else {
+				createAstroid(astroidA);
+				aSpawn=0;
+			}
 			flagR = 0;
 		}
 		fgcolor(15);

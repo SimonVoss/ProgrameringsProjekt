@@ -6,6 +6,7 @@
 #include "stdint.h"
 #include "stdio.h"
 
+
 //structs
 
 typedef struct {
@@ -19,14 +20,21 @@ typedef struct {
 } bullet;
 
 typedef struct {
-	uint32_t x,y;
+	int32_t x,y;
 	int8_t alive;
 } badShip;
 
 typedef struct {
-	uint32_t x,y;
+	int32_t x,y;
 	int8_t life;
 } goodShip;
+
+typedef struct {
+	uint32_t x,y;
+	int8_t alive;
+} bigRock;
+
+
 
 //more includes
 
@@ -41,7 +49,8 @@ typedef struct {
 #include "enemy.h"
 #include "player.h"
 #include "timer.h"
-
+#include "astroid.h"
+#include "collision.h"
 
 
 

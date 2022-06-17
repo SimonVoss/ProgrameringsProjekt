@@ -12,5 +12,6 @@ void updateBulletFriendly(bullet a[]);
 void updateBulletEnemy(bullet a[]);
 int32_t bulletHitEnemy(bullet a[], badShip b[], int32_t score);
 void bulletHitPlayer(bullet a[], goodShip *b);
+void bulletHitAstroid(bullet a[], bigRock b[]);
 
 #endif /* BULLETS_H_ */

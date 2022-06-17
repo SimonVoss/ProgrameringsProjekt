@@ -31,7 +31,7 @@ void clockCounter(int32_t score,int32_t *c1,int32_t *c2,int32_t *c3,int16_t *fla
 		}
 
 	}else if (score<<8 == nextInterval){
-		time = FIX8_MULT(time, 0xCC);
+		time = FIX8_MULT(time, 0xE7);
 		if (*c1 >= time>>1){
 			*flagF = 1;
 			*c1=0;

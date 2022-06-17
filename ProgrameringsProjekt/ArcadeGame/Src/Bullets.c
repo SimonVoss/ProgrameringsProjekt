@@ -123,7 +123,7 @@ void updateBulletEnemy(bullet a[]){
 int32_t bulletHitEnemy(bullet a[], badShip b[], int32_t score) {
 	int8_t i,j;
 	for(i = 0; i < 50; i++) {
-		if(!(a[i].alive==0)) {
+		if(a[i].alive==1) {
 			if(a[i].enemy==0) {
 				for(j = 0; j < 20; j++) {
 					if(!(b[j].alive==0)) {
@@ -154,7 +154,7 @@ int32_t bulletHitEnemy(bullet a[], badShip b[], int32_t score) {
 void bulletHitPlayer(bullet a[], goodShip *b) {
 	int8_t i;
 	for(i = 0; i < 50; i++) {
-		if(!(a[i].alive==0)) {
+		if(a[i].alive==1) {
 			if((a[i].y>>8)>=b->y && (a[i].y>>8)<=b->y+5 && (a[i].x>>8)>=b->x-4 && (a[i].x>>8)<=b->x+4) {
 				a[i].alive = 0;
 				a[i].x=0;
@@ -162,6 +162,27 @@ void bulletHitPlayer(bullet a[], goodShip *b) {
 				a[i].vec.x=0;
 				a[i].vec.y=0;
 				b->life--;
+			}
+		}
+	}
+}
+
+void bulletHitAstroid(bullet a[], bigRock b[]) {
+	int8_t i, j;
+	for(i = 0; i < 50; i++) {
+		if(a[i].alive==1) {
+			for(j = 0; j < 5; j++) {
+				if(b[i].alive==1) {
+					if((a[i].y>>8)<=(b[j].y+2) && (a[i].y>>8)>=(b[j].y-3) && (a[i].x>>8) >= (b[j].x-4) && (a[i].x>>8) <= (b[j].x+4)) {
+						astroidDraw(b[j].x,b[j].y);
+						a[i].x=0;
+						a[i].y=0;
+						a[i].alive=0;
+						a[i].enemy=0;
+						a[i].vec.x=0;
+						a[i].vec.y=0;
+					}
+				}
 			}
 		}
 	}
