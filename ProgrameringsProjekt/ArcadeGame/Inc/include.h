@@ -13,13 +13,20 @@ typedef struct {
 }vector_t;
 
 typedef struct {
-	int32_t x, y, alive, enemy;
+	int32_t x, y;
+	int8_t alive, enemy;
 	vector_t vec;
 } bullet;
 
 typedef struct {
-	uint32_t x,y,alive;
+	uint32_t x,y;
+	int8_t alive;
 } badShip;
+
+typedef struct {
+	uint32_t x,y;
+	int8_t life;
+} goodShip;
 
 //more includes
 
@@ -34,7 +41,6 @@ typedef struct {
 #include "enemy.h"
 #include "player.h"
 #include "timer.h"
-#include "lcd.h"
 
 
 

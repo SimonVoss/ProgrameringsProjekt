@@ -3,9 +3,7 @@
 
 #include "include.h"
 
-typedef struct {
-	uint32_t x,y,life;
-} goodShip;
+
 
 void createPlayer(goodShip *player);
 void movePlayer(goodShip *player, int32_t joystick);

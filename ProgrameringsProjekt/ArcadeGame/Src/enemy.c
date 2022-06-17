@@ -29,35 +29,31 @@ void createEnemy(badShip a[]) {
 			a[i].x = 10+randSpawn*13;
 			a[i].y = 10;
 			a[i].alive=1;
-			int16_t x = a[i].x;
-			int16_t y = a[i].y;
-			a[i].x = a[i].x<<8;
-			a[i].y = a[i].y<<8;
-			enemyDraw(x, y);
+			enemyDraw(a[i].x, a[i].y);
 			break;
 		}
 	}
 }
 
-void moveEnemy(badShip a[]) {
+void moveEnemy(badShip a[], goodShip *player) {
 	int8_t i;
 	for(i=0; i<20;i++) {
-		if(a[i].alive==1) {
-			if(!((a[i].y>>8)==(123))) {
-				a[i].y = slideEnemy(a[i]);
+		if(!(a[i].alive==0)) {
+			if(!((a[i].y)==(123))) {
+				slideEnemy(a[i]);
+				a[i].y = a[i].y+(1);
 			} else {
-				enemyRemove(a[i].x>>8, a[i].y>>8);
+				enemyRemove(a[i].x, a[i].y);
 				a[i].alive=0;
+				player->life--;
 			}
 		}
 	}
 
 }
 
-int16_t slideEnemy(badShip a) {
+void slideEnemy(badShip a) {
 	fgcolor(1);
-	a.x = a.x >> 8;
-	a.y = a.y >> 8;
 	gotoxy(a.x-3,a.y+1);
 	printf("%c",219);
 	gotoxy(a.x+3,a.y+1);
@@ -121,6 +117,5 @@ int16_t slideEnemy(badShip a) {
 	printf("%c",219);
 	gotoxy(a.x+4,a.y-8);
 	printf("%c",219);
-	return (a.y+1) << 8;
 }
 

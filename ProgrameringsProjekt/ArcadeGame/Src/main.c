@@ -17,7 +17,7 @@ void TIM1_BRK_TIM15_IRQHandler(void) {
 	c1=c1+(1<<8);
 	c2=c2+(1<<8);
 	c3=c3+(1<<8);
-	TIM15->SR &= ~0x0001; // Clear interrupt bit
+	TIM15->SR &= ~0x0001; //s Clear interrupt bit
 }
 
 
@@ -26,13 +26,9 @@ void TIM1_BRK_TIM15_IRQHandler(void) {
 
 int main(void) {
 	//Initialicering af forbindelse
-	uart_init(2060000);
-//	int32_t i;
+	uart_init(500000);
+	int32_t i;
 	int8_t timeOut = 0;
-	int16_t buffer[512];
-	char lives[7] = {'L','i','v','e','s',':','\0'};
-	lcd_write_string(lives, &buffer,2*128);
-	lcd_write_heart(1,3,&buffer,3*128);
 	color(15,0);
 	//Initialicering af Programmer i main Start
 	config();
@@ -78,11 +74,15 @@ int main(void) {
 			updateBulletFriendly(&bulletF);
 			updateBulletEnemy(&bulletE);
 			score = bulletHitEnemy(&bulletF, &enemyA, score);
-			createScoreLCD(score,&buffer);
+			bulletHitPlayer(&bulletE, &player);
+			if(player.life==0) {
+				playerRemove(player.x,player.y);
+				while(1) {}
+			}
 			flagF = 0;
 		}
 		if (flagE == 1){
-			moveEnemy(&enemyA);
+			moveEnemy(&enemyA, &player);
 			flagE = 0;
 		}
 		if (flagR == 1) {
@@ -90,6 +90,11 @@ int main(void) {
 			createEnemy(&enemyA);
 			flagR = 0;
 		}
+		fgcolor(15);
+		gotoxy(3,2);
+		printf("%d",score);
+		gotoxy(3,3);
+		printf("%d",player.life);
 
 		//Hentning af kontinuerlig info Slut
 

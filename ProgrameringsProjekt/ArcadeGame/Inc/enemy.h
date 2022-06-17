@@ -6,8 +6,8 @@
 
 void initArrayEnemy(badShip a[], int8_t length);
 void createEnemy(badShip a[]);
-void moveEnemy(badShip a[]);
-int16_t slideEnemy(badShip a);
+void moveEnemy(badShip a[], goodShip *player);
+void slideEnemy(badShip a);
 
 
 
