@@ -30,9 +30,15 @@ typedef struct {
 } goodShip;
 
 typedef struct {
-	uint32_t x,y;
+	int32_t x,y;
 	int8_t alive;
 } bigRock;
+
+typedef struct {
+	int32_t x,y;
+	int8_t alive;
+	vector_t vec;
+} boomRod;
 
 
 
@@ -44,6 +50,7 @@ typedef struct {
 #include "analog.h"
 #include "sprite.h"
 #include "bullets.h"
+#include "missile.h"
 #include "buzz.h"
 #include "gameBoard.h"
 #include "enemy.h"

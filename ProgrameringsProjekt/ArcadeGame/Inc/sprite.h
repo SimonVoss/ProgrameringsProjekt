@@ -10,7 +10,8 @@ void enemyDraw(int32_t x, int32_t y);
 void enemyRemove(int32_t x, int32_t y);
 void astroidDraw(int32_t x, int32_t y);
 void astroidRemove(int32_t x, int32_t y);
-
+void missileDraw(int32_t x, int32_t y);
+void missileRemove(int32_t x, int32_t y);
 
 
 #endif /* SPRITE_H_ */
