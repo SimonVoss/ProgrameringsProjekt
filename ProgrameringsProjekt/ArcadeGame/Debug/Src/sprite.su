@@ -1,6 +1,6 @@
 ../Src/sprite.c:3:6:playerDraw	32	static
 ../Src/sprite.c:33:6:playerRemove	16	static
-../Src/sprite.c:55:6:enemyDraw	32	static
-../Src/sprite.c:89:6:enemyRemove	16	static
-../Src/sprite.c:117:6:astroidDraw	32	static
-../Src/sprite.c:149:6:astroidRemove	16	static
+../Src/sprite.c:56:6:enemyDraw	32	static
+../Src/sprite.c:90:6:enemyRemove	16	static
+../Src/sprite.c:118:6:astroidDraw	32	static
+../Src/sprite.c:150:6:astroidRemove	16	static

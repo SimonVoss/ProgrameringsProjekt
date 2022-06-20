@@ -1,0 +1,4 @@
+../Src/astroid.c:3:6:initArrayAstroid	24	static
+../Src/astroid.c:12:6:createAstroid	24	static
+../Src/astroid.c:39:6:moveAstroid	24	static
+../Src/astroid.c:54:6:slideAstroid	32	static

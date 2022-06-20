@@ -1,0 +1,3 @@
+../Src/config.c:3:6:pinConfig	4	static
+../Src/config.c:53:6:adcConfig	16	static
+../Src/config.c:74:6:config	8	static

@@ -1,16 +1,17 @@
 
 #ifndef BULLETS_H_
 #define BULLETS_H_
-#include "stdio.h"
-#include "stdint.h"
+#include "include.h"
+#include "math.h"
 
-typedef struct {
-	int32_t x,y;
-} bulletPos;
 
-void bulletSpaceship(int32_t x, int32_t y, bulletPos *a);
-void bulletEnemy(int32_t x, int32_t y, bulletPos *a);
-void updateBulletFriendly(bulletPos *a);
-void updateBulletEnemy(bulletPos *a);
+void initArrayBullets(bullet a[], int8_t lenght);
+void bulletSpaceship(int16_t x, int16_t y, bullet a[]);
+void bulletEnemy(badShip b[], bullet a[]);
+void updateBulletFriendly(bullet a[]);
+void updateBulletEnemy(bullet a[]);
+int32_t bulletHitEnemy(bullet a[], badShip b[], int32_t score);
+void bulletHitPlayer(bullet a[], goodShip *b);
+void bulletHitAstroid(bullet a[], bigRock b[]);
 
 #endif /* BULLETS_H_ */

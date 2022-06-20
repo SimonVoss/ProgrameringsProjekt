@@ -1,2 +1,4 @@
 ../Src/player.c:3:6:createPlayer	16	static
-../Src/player.c:11:6:playerMove	16	static
+../Src/player.c:11:6:movePlayer	16	static
+../Src/player.c:22:6:shiftRight	16	static
+../Src/player.c:123:6:shiftLeft	16	static

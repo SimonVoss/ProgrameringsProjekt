@@ -52,6 +52,7 @@ void playerRemove(int32_t x, int32_t y) {
 }
 
 
+
 void enemyDraw(int32_t x, int32_t y) {
 	fgcolor(1);
 	gotoxy(x-3,y);
@@ -167,4 +168,26 @@ void astroidRemove(int32_t x, int32_t y) {
 	printf("  ");
 	gotoxy(x-1,y+2);
 	printf("    ");
+}
+
+
+void missileDraw(int32_t x, int32_t y) {
+	fgcolor(8);
+	gotoxy(x,y);
+	printf("%c",219);
+	gotoxy(x,y+1);
+	printf("%c",219);
+	gotoxy(x,y+2);
+	fgcolor(9);
+	printf("%c",219);
+}
+
+void missileRemove(int32_t x, int32_t y) {
+	fgcolor(0);
+	gotoxy(x,y);
+	printf("%c",219);
+	gotoxy(x,y+1);
+	printf("%c",219);
+	gotoxy(x,y+2);
+	printf("%c",219);
 }

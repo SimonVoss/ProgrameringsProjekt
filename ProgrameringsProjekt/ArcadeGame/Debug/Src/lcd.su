@@ -1,0 +1,5 @@
+../Src/lcd.c:3:6:createScoreLCD	40	static
+../Src/lcd.c:15:6:lcd_write_level	32	static
+../Src/lcd.c:25:6:lcd_write_missil	48	static
+../Src/lcd.c:52:6:lcd_write_string	40	static
+../Src/lcd.c:63:6:lcd_write_heart	40	static
