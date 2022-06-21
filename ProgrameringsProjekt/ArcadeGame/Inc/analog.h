@@ -13,6 +13,6 @@
 int8_t adcRead1(void);
 int8_t adcRead2(void);
 int8_t buttonRead(void);
-void buzz(int32_t lyd, int32_t *c, int32_t *flag);
+void buzz(int8_t lyd, int8_t buzzCount);
 
 #endif

@@ -10,6 +10,9 @@ void collision(badShip a[], bigRock b[], goodShip *c) {
 				a[i].y=0;
 				a[i].alive=0;
 				c->life--;
+				GPIOB->ODR &= ~(0x0001 << 4); //Red on
+				GPIOC->ODR |= (0x0001 << 7); //Green off
+				GPIOA->ODR |= (0x0001 << 9); //Blue off
 				playerDraw(c->x,c->y);
 			}
 		}
@@ -22,6 +25,9 @@ void collision(badShip a[], bigRock b[], goodShip *c) {
 				b[i].y=0;
 				b[i].alive=0;
 				c->life--;
+				GPIOB->ODR &= ~(0x0001 << 4); //Red on
+				GPIOC->ODR |= (0x0001 << 7); //Green off
+				GPIOA->ODR |= (0x0001 << 9); //Blue off
 				playerDraw(c->x,c->y);
 			}
 		}

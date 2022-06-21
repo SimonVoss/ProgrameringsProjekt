@@ -31,7 +31,7 @@ void menuSelect(int8_t button, int8_t *sel, int8_t *game){
 		wordText(39,word4Y, 2, 0); 	//HELP
 		signText(13, word3Y, 3, 0); // ->
 
-		buzz(1,0, 0);
+		buzz(5,0);
 		TIM2->CR1 = 0x0000; // Disable timer
 
 		while(*sel == 1){
@@ -58,7 +58,7 @@ void menuSelect(int8_t button, int8_t *sel, int8_t *game){
 			button = buttonRead();
 			if(button == 1){
 				*sel = 1;
-				buzz(1,0, 0);
+				buzz(5,0);
 				TIM2->CR1 = 0x0000; // Disable timer
 				break;
 			}
@@ -108,20 +108,20 @@ void menu(char q, int8_t pil, char overstNederst, int16_t points, int8_t *sel){
 		if(pil == 1 || overstNederst == 'o' ){
 		signText(13,word3Y,3, 13);  // ->
 		signText(13,word4Y,3, 0);  // ->
-		buzz(1,0, 0);
+		buzz(5,0);
 		TIM2->CR1 = 0x0000; // Disable timer
 		}
 
 		if(pil == 2 || overstNederst == 'n'){
 		signText(13,word3Y,3, 0);  	// ->
 		signText(13,word4Y,3, 13);  	// ->
-		buzz(1,0, 0);
+		buzz(5,0);
 		TIM2->CR1 = 0x0000; // Disable timer
 		}
 	}
 	if(q == 'h'){
 
-		buzz(1,0, 0);
+		buzz(5,0);
 		TIM2->CR1 = 0x0000; // Disable timer
 
 		playerDraw(15,word1Y-1);
@@ -207,7 +207,7 @@ void menu(char q, int8_t pil, char overstNederst, int16_t points, int8_t *sel){
 		enemyDraw(91,word6Y+18);
 		enemyDraw(104,word6Y+18);
 
-		buzz(1,0, 0);
+		buzz(5,0);
 		TIM2->CR1 = 0x0000; // Disable timer
 
 	}

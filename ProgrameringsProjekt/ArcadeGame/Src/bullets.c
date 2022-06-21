@@ -53,6 +53,42 @@ void bulletEnemy(badShip b[], bullet a[]){
 	}
 }
 
+void updateBullet(bullet a[]){
+	int32_t i;
+	for (i=0 ; i<50; i++){
+		if (!(a[i].alive==0)){
+			int32_t x = a[i].x>>8;
+			int32_t y = a[i].y>>8;
+			a[i].x = a[i].x+a[i].vec.x;
+			a[i].y = a[i].y+a[i].vec.y;
+			int32_t newX = a[i].x>>8;
+			int32_t newY = a[i].y>>8;
+			if (newY<122 && newY>3 && newX>1 && newX<136){
+				gotoxy(x,y);
+				fgcolor(0);
+				printf("%c",254);
+				gotoxy(newX,newY);
+				if(a[i].enemy==1){
+					fgcolor(13);
+				} else {
+					fgcolor(10);
+				}
+				printf("%c",254);
+			}else {
+				gotoxy(x,y);
+				fgcolor(0);
+				printf("%c",254);
+				a[i].alive = 0;
+				a[i].x=0;
+				a[i].y=0;
+				a[i].enemy=0;
+				a[i].vec.x=0;
+				a[i].vec.y=0;
+			}
+		}
+	}
+}
+
 void updateBulletFriendly(bullet a[]){
 	int32_t i;
 	for (i=0 ; i<50; i++){
@@ -156,6 +192,9 @@ void bulletHitPlayer(bullet a[], goodShip *b) {
 	for(i = 0; i < 50; i++) {
 		if(a[i].alive==1) {
 			if((a[i].y>>8)>=b->y && (a[i].y>>8)<=b->y+5 && (a[i].x>>8)>=b->x-4 && (a[i].x>>8)<=b->x+4) {
+				GPIOB->ODR &= ~(0x0001 << 4); //Red on
+				GPIOC->ODR |= (0x0001 << 7); //Green off
+				GPIOA->ODR |= (0x0001 << 9); //Blue off
 				fgcolor(0);
 				gotoxy(a[i].x>>8,a[i].y>>8);
 				printf("%c",219);

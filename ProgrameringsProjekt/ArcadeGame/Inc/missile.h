@@ -6,7 +6,7 @@
 void createMissile(boomRod *missile);
 void missileShoot(boomRod *missile, goodShip *player);
 void missileShift(boomRod *missile);
-void missileUpdate(boomRod *missile, badShip a[], bigRock b[]);
+int32_t missileUpdate(boomRod *missile, badShip a[], bigRock b[], int32_t score);
 
 
 #endif /* MISSILE_H_ */

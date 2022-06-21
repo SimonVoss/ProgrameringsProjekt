@@ -52,16 +52,15 @@ int8_t buttonRead(void) {
 }
 
 
-
-void buzz(int32_t lyd, int32_t *c, int32_t *flag){
+void buzz(int8_t lyd, int8_t buzzCount){
 
 	//sound effects
 	//0 - no sound
 	//1 - player shoots a bullet
-	//2 - Play gets hit
-	//4 - player hits an enemy / astoroid
-	//16 - new level
-	//8 - menu sound
+	// - Play gets hit
+	// - player hits an enemy / astoroid
+	//4 - new level
+	//5 - menu sound
 
 	int32_t i, j, k;
 
@@ -71,43 +70,35 @@ void buzz(int32_t lyd, int32_t *c, int32_t *flag){
 	}
 
 
-
-//	if(lyd == 1){
-//		if(fork() == 0){
-//			TIM2->CR1 = 0x0001; // enable timer
-//			for (i=1; i<3; i++){
-//				int32_t freq = 500/i;
-//				int32_t PRESCALER_VALUE = 9;
-//				uint32_t reload = 64e6 / freq / (PRESCALER_VALUE + 1) - 1;
-//				TIM2->ARR = reload; // Set auto reload value
-//				TIM2->CCR3 = reload/2; // Set compare register
-//				TIM2->EGR |= 0x01;
-//				printf("freq = %d , i = %d , lyd = %d\n",freq,i,lyd);
-//				for(j=0;j<=tid0;j++){}
-//			}
-//		}
-//
-//	}
-
-
-
-
-	if(lyd == 16){
+	if(lyd == 11){
 		TIM2->CR1 = 0x0001; // enable timer
-		for (i=1; i<3; i++){
-			int32_t freq = 500/i;
-			int32_t PRESCALER_VALUE = 9;
+			int32_t freq = 300;
+			int8_t PRESCALER_VALUE = 9;
 			uint32_t reload = 64e6 / freq / (PRESCALER_VALUE + 1) - 1;
 			TIM2->ARR = reload; // Set auto reload value
 			TIM2->CCR3 = reload/2; // Set compare register
 			TIM2->EGR |= 0x01;
-//			printf("freq = %d , i = %d , lyd = %d\n",freq,i,lyd);
-			for(j=0;j<=tid0;j++){}
-		}
-
+	}
+	if(lyd == 12){
+		TIM2->CR1 = 0x0001; // enable timer
+			int32_t freq = 1200;
+			int8_t PRESCALER_VALUE = 9;
+			uint32_t reload = 64e6 / freq / (PRESCALER_VALUE + 1) - 1;
+			TIM2->ARR = reload; // Set auto reload value
+			TIM2->CCR3 = reload/2; // Set compare register
+			TIM2->EGR |= 0x01;
+	}
+	if(lyd == 13){
+		TIM2->CR1 = 0x0001; // enable timer
+			int32_t freq = 400;
+			int8_t PRESCALER_VALUE = 9;
+			uint32_t reload = 64e6 / freq / (PRESCALER_VALUE + 1) - 1;
+			TIM2->ARR = reload; // Set auto reload value
+			TIM2->CCR3 = reload/2; // Set compare register
+			TIM2->EGR |= 0x01;
 	}
 
-	if(lyd == 8){
+	if(lyd == 2){
 		TIM2->CR1 = 0x0001; // enable timer
 		for (i=50; i>=3; i--){
 			int32_t freq = 2*i;
@@ -122,7 +113,7 @@ void buzz(int32_t lyd, int32_t *c, int32_t *flag){
 
 	}
 
-	if(lyd == 4){
+	if(lyd == 3){
 		TIM2->CR1 = 0x0001; // enable timer
 		for (i=1; i<=3; i++){
 			for (j=1;j<=2;j++){
@@ -140,7 +131,7 @@ void buzz(int32_t lyd, int32_t *c, int32_t *flag){
 
 	}
 
-	if(lyd == 2){
+	if(lyd == 4){
 		TIM2->CR1 = 0x0001; // enable timer
 		for (i=1; i<=5; i++){
 			int32_t freq = 500*i;
@@ -155,7 +146,7 @@ void buzz(int32_t lyd, int32_t *c, int32_t *flag){
 
 	}
 
-	if(lyd == 1){
+	if(lyd == 5){
 		TIM2->CR1 = 0x0001; // enable timer
 			int32_t freq = 300;
 			int32_t PRESCALER_VALUE = 9;

@@ -12,9 +12,14 @@ void clockInit(){
 	TIM15->CR1 |= 0x0001; // Enable timer
 }
 
-void clockCounter(int32_t score,int32_t *c1,int32_t *c2,int32_t *c3,int16_t *flagF, int16_t *flagE, int16_t *flagR, int8_t *level, int32_t *nextInterval){
+void clockCounter(int32_t score,int32_t *c1,int32_t *c2,int32_t *c3,int16_t *flagF, int16_t *flagE, int16_t *flagR, int8_t *level, int8_t reset){
 	static int32_t time = 1000<<8;
-	if (score<<8 < *nextInterval){
+	static int32_t nextInterval = 100;
+	if(reset==1) {
+		time = 1000<<8;
+		nextInterval = 100;
+	}
+	if (score < nextInterval){
 		if (*c1 >= time>>1){
 			*flagF = 1;
 			*c1=0;
@@ -29,8 +34,11 @@ void clockCounter(int32_t score,int32_t *c1,int32_t *c2,int32_t *c3,int16_t *fla
 
 		}
 
-	}else if (score<<8 == *nextInterval){
-		time = FIX8_MULT(time, 0xE7);
+	}else if (score == nextInterval){
+		GPIOB->ODR |= (0x0001 << 4); //Red off
+		GPIOC->ODR &= ~(0x0001 << 7); //Green on
+		GPIOA->ODR |= (0x0001 << 9); //Blue off
+		time = FIX8_MULT(time, 0xCC);
 		*level=*level+1;
 		if (*c1 >= time>>1){
 			*flagF = 1;
@@ -44,7 +52,7 @@ void clockCounter(int32_t score,int32_t *c1,int32_t *c2,int32_t *c3,int16_t *fla
 			*flagR = 1;
 			*c3=0;
 		}
-		*nextInterval = *nextInterval<<1;
+		nextInterval = nextInterval<<1;
 	}
 
 }

@@ -29,7 +29,7 @@ void missileShift(boomRod *missile) {
 	printf("%c",219);
 }
 
-void missileUpdate(boomRod *missile, badShip a[], bigRock b[]) {
+int32_t missileUpdate(boomRod *missile, badShip a[], bigRock b[], int32_t score) {
 	int8_t i;
 	for(i = 0; i < 20; i++) {
 		if(a[i].alive==1) {
@@ -45,6 +45,7 @@ void missileUpdate(boomRod *missile, badShip a[], bigRock b[]) {
 					missile->alive=0;
 					missile->vec.x=0;
 					missile->vec.y=0;
+					score += 20;
 				}
 			}
 		}
@@ -78,5 +79,6 @@ void missileUpdate(boomRod *missile, badShip a[], bigRock b[]) {
 			missile->vec.y=0;
 		}
 	}
+	return score;
 }
 

@@ -1,12 +1,12 @@
 #include "gameBoard.h"
 
 
-//1,1 til 124,137
+//1,1 til 137,124
 //x-akse man kan bruge 2-136
 //y-akse man kan bruge 2-123
 void makeBorder(void) {
 	int32_t i;
-	fgcolor(3);
+	color(3,0);
 	gotoxy(1,1);
 	printf("%c",218);
 	for(i = 0; i <= 134; i++) {
@@ -30,7 +30,7 @@ void makeBorder(void) {
 void makeBoard(void) {
 	int32_t i;
 	int32_t j;
-	fgcolor(3);
+	color(3,0);
 	gotoxy(1,1);
 	printf("%c",218);
 	for(i = 0; i <= 134; i++) {
